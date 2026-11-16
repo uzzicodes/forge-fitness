@@ -114,6 +114,8 @@ void main() {
       );
       await tester.tap(find.text('open'));
       await tester.pumpAndSettle();
+      await tester.ensureVisible(find.text('Estimate with AI'));
+      await tester.pumpAndSettle();
       await tester.tap(find.text('Estimate with AI'));
       await tester.pumpAndSettle();
       expect(sent!['image'], startsWith('data:image/jpeg;base64,'));
@@ -123,6 +125,7 @@ void main() {
       expect(onPressed(tester, confirm), isNull);
 
       await tester.ensureVisible(find.text('¾'));
+      await tester.pumpAndSettle();
       await tester.tap(find.text('¾'));
       await tester.pumpAndSettle();
       expect(find.text('450 kcal'), findsWidgets);
@@ -170,6 +173,8 @@ void main() {
     );
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField).first, 'chicken biryani');
+    await tester.ensureVisible(find.text('Estimate my meal'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Estimate my meal'));
     await tester.pumpAndSettle();
     expect(find.text('CHECK YOUR PORTION'), findsNothing);
