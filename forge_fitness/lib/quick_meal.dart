@@ -15,11 +15,14 @@ class QuickMealEntry extends StatefulWidget {
   final AppStore store;
   final DateTime date;
   final http.Client? client;
+  /// Pre-selected photo; used by tests (the picker cannot run in widget tests).
+  final Uint8List? initialPhoto;
   const QuickMealEntry({
     super.key,
     required this.store,
     required this.date,
     this.client,
+    this.initialPhoto,
   });
   @override
   State<QuickMealEntry> createState() => _QuickMealEntryState();
@@ -34,11 +37,16 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
   List<String> providers = [];
   Map<String, dynamic>? estimate;
   List<String> suggestions = [];
+  /// True when the current estimate came from photo AI. A photo cannot
+  /// measure weight, so the user must confirm the portion before logging.
+  bool photoEstimate = false;
+  double? portionFactor;
   late final http.Client client;
   @override
   void initState() {
     super.initState();
     client = widget.client ?? widget.store.foodClient();
+    photo = widget.initialPhoto;
     checkAi();
   }
 
@@ -161,7 +169,13 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
       if (r.statusCode != 200) {
         throw Exception(data['error'] ?? 'Could not read that meal.');
       }
-      if (mounted) setState(() => estimate = data);
+      if (mounted) {
+        setState(() {
+          estimate = data;
+          photoEstimate = useGemini && image != null;
+          portionFactor = photoEstimate ? null : 1;
+        });
+      }
     } catch (e) {
       if (mounted) {
         setState(
@@ -196,6 +210,8 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
             if (mounted) {
               setState(() {
                 estimate = data;
+                photoEstimate = false;
+                portionFactor = 1;
                 message.text = data['name'] as String;
                 photo = null;
                 useGemini = false;
@@ -210,7 +226,17 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
 
   @override
   Widget build(BuildContext context) {
-    final j = estimate, ready = j != null && j['needsClarification'] != true;
+    final raw = estimate;
+    final ready = raw != null && raw['needsClarification'] != true;
+    final Map<String, dynamic> base = raw ?? const {};
+    final factor = portionFactor;
+    // What the review card shows and what gets logged: the estimate scaled
+    // by the portion the user chose (unchanged when no scaling applies).
+    final Map<String, dynamic> shown = ready && factor != null && factor != 1
+        ? scaleEstimate(base, factor)
+        : base;
+    final j = raw == null ? null : shown;
+    final needsPortion = ready && photoEstimate && factor == null;
     final items = (j?['items'] as List? ?? []);
     return PopScope(
       canPop: !busy && !saving,
@@ -452,7 +478,7 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
                         runSpacing: 10,
                         children: [
                           Text(
-                            '${(j['calories'] as num).round()} kcal',
+                            '${(shown['calories'] as num).round()} kcal',
                             style: const TextStyle(
                               fontSize: 27,
                               fontWeight: FontWeight.w800,
@@ -460,7 +486,7 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
                             ),
                           ),
                           Text(
-                            '${(j['protein'] as num).toStringAsFixed(1)} g protein',
+                            '${(shown['protein'] as num).toStringAsFixed(1)} g protein',
                             style: const TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.w700,
@@ -471,13 +497,13 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
                       ),
                       gap(8),
                       small(
-                        '${(j['carbs'] as num).toStringAsFixed(1)} g carbs · ${(j['fat'] as num).toStringAsFixed(1)} g fat',
+                        '${(shown['carbs'] as num).toStringAsFixed(1)} g carbs · ${(shown['fat'] as num).toStringAsFixed(1)} g fat',
                       ),
                     ],
-                    if ((j['waterMl'] as num? ?? 0) > 0) ...[
+                    if ((shown['waterMl'] as num? ?? 0) > 0) ...[
                       gap(10),
                       Text(
-                        '${j['waterMl']} ml water',
+                        '${shown['waterMl']} ml water',
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700,
@@ -486,9 +512,9 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
                       ),
                     ],
                     gap(12),
-                    if ((j['assumptions'] as String? ?? '').isNotEmpty)
+                    if ((shown['assumptions'] as String? ?? '').isNotEmpty)
                       Text(
-                        j['assumptions'] as String,
+                        shown['assumptions'] as String,
                         style: const TextStyle(
                           color: muted,
                           fontSize: 12,
@@ -502,17 +528,25 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
                   ],
                 ),
               ),
+              if (photoEstimate) ...[
+                gap(14),
+                PortionCheck(
+                  assumed: base['portion'] as String? ?? '',
+                  selected: portionFactor,
+                  onChanged: (f) => setState(() => portionFactor = f),
+                ),
+              ],
               gap(14),
               SizedBox(
                 width: double.infinity,
                 child: FilledButton.icon(
-                  onPressed: saving || busy
+                  onPressed: saving || busy || needsPortion
                       ? null
                       : () async {
                           setState(() => saving = true);
                           await widget.store.confirmMealEstimate(
                             widget.date,
-                            j,
+                            shown,
                           );
                           if (context.mounted) {
                             Navigator.pop(context);
@@ -523,7 +557,13 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
                           }
                         },
                   icon: const Icon(Icons.check),
-                  label: Text(saving ? 'Saving…' : 'Yes, confirm & log'),
+                  label: Text(
+                    saving
+                        ? 'Saving…'
+                        : needsPortion
+                        ? 'Choose your portion first'
+                        : 'Yes, confirm & log',
+                  ),
                 ),
               ),
             ],
@@ -601,4 +641,85 @@ class _QuickMealEntryState extends State<QuickMealEntry> {
       ),
     );
   }
+}
+
+/// Portion multipliers offered after a photo estimate.
+const portionChoices = <(String, double)>[
+  ('Half', .5),
+  ('¾', .75),
+  ('As shown', 1),
+  ('1¼', 1.25),
+  ('1½', 1.5),
+  ('Double', 2),
+];
+
+String _factor(double f) => f == f.roundToDouble()
+    ? f.toInt().toString()
+    : f.toString().replaceFirst(RegExp(r'0+$'), '');
+
+/// Scales a reviewed estimate by the portion the user actually ate.
+/// Only nutrition and the portion text change; the AI's assumptions stay
+/// visible so the record remains transparent about where numbers came from.
+Map<String, dynamic> scaleEstimate(Map<String, dynamic> j, double factor) {
+  double r(Object? v) => ((v as num? ?? 0) * factor * 10).round() / 10;
+  final note = 'you set ×${_factor(factor)} of the assumed portion';
+  return {
+    ...j,
+    for (final k in ['calories', 'protein', 'carbs', 'fat']) k: r(j[k]),
+    'portion': '${j['portion'] ?? ''} · $note',
+    'items': [
+      for (final item in (j['items'] as List? ?? []))
+        if (item is Map)
+          {
+            ...item,
+            for (final k in ['calories', 'protein', 'carbs', 'fat'])
+              k: r(item[k]),
+            'portion': '${item['portion'] ?? ''} · $note',
+          },
+    ],
+  };
+}
+
+class PortionCheck extends StatelessWidget {
+  final String assumed;
+  final double? selected;
+  final ValueChanged<double> onChanged;
+  const PortionCheck({
+    super.key,
+    required this.assumed,
+    required this.selected,
+    required this.onChanged,
+  });
+  @override
+  Widget build(BuildContext context) => box(
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        tag('CHECK YOUR PORTION', color: orange),
+        gap(10),
+        Text(
+          assumed.isEmpty
+              ? 'A photo cannot measure weight. How much did you eat?'
+              : 'A photo cannot measure weight. The estimate assumed: $assumed',
+        ),
+        gap(12),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final (label, f) in portionChoices)
+              ChoiceChip(
+                label: Text(label),
+                selected: selected == f,
+                onSelected: (_) => onChanged(f),
+              ),
+          ],
+        ),
+        gap(10),
+        small(
+          'Choose “As shown” if that matches what you ate. Calories and macros scale with your choice; it is still an estimate, not a measurement.',
+        ),
+      ],
+    ),
+  );
 }
