@@ -313,4 +313,61 @@ void main() {
       s.dispose();
     },
   );
+
+  test('trend keeps one best set per day using the same rule as the PR', () {
+    final sessions = <String, dynamic>{
+      '2026-10-05': {'sets': {'bench-0': logged(8, 50), 'bench-1': logged(10, 50)}},
+      '2026-10-12': {'sets': {'bench-0': logged(8, 55), 'bench-1': logged(8, 70, checked: false)}},
+      '2026-10-19': {'sets': {'dbpress-0': logged(10, 20)}},
+      '2026-10-26': {'sets': {'bench-0': logged(6, 52.5)}},
+      '2026-11-09': {'sets': {'bench-0': logged(8, 90)}},
+    };
+    final t = exerciseRecords(sessions, ex('bench'), now, now: now).trend();
+    expect(t.map((p) => p.date), ['2026-10-05', '2026-10-12', '2026-10-26']);
+    expect(t.map((p) => p.value), [50, 55, 52.5]);
+    expect(t.first.set.reps, 10);
+  });
+
+  test('assisted trend tracks assistance; bodyweight trend tracks reps', () {
+    final sessions = <String, dynamic>{
+      '2026-10-05': {'sets': {'assistedpullup-0': logged(8, 30), 'plank-0': logged(30, 0)}},
+      '2026-10-12': {'sets': {'assistedpullup-0': logged(8, 25), 'plank-0': logged(45, 0), 'plank-1': logged(20, 10)}},
+    };
+    final a = exerciseRecords(sessions, ex('assistedpullup'), now, now: now);
+    expect(a.trend().map((p) => p.value), [30, 25]);
+    expect(a.trendUnit, contains('lower is better'));
+    final b = exerciseRecords(sessions, ex('plank'), now, now: now);
+    expect(b.trend().map((p) => p.value), [30, 45]);
+    expect(b.trendUnit, 'seconds');
+  });
+
+  test('trend is capped to the most recent sessions', () {
+    final sessions = <String, dynamic>{
+      for (var d = 1; d <= 20; d++)
+        '2026-10-${d.toString().padLeft(2, '0')}': {'sets': {'bench-0': logged(8, d.toDouble())}},
+    };
+    final t = exerciseRecords(sessions, ex('bench'), now, now: now).trend();
+    expect(t.length, 12);
+    expect(t.first.value, 9);
+    expect(t.last.value, 20);
+  });
+
+  testWidgets('trend chart needs two days, then shows the change', (tester) async {
+    Future<void> show(Map<String, dynamic> sessions) => tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: PrTrendChart(records: exerciseRecords(sessions, ex('bench'), now, now: now)),
+        ),
+      ),
+    );
+    await show({'2026-10-05': {'sets': {'bench-0': logged(8, 50)}}});
+    expect(find.textContaining('appears after two training days'), findsOneWidget);
+    await show({
+      '2026-10-05': {'sets': {'bench-0': logged(8, 50)}},
+      '2026-10-12': {'sets': {'bench-0': logged(8, 57.5)}},
+    });
+    expect(find.text('+7.5 kg over 2 sessions'), findsOneWidget);
+    expect(find.byType(CustomPaint), findsWidgets);
+    expect(tester.takeException(), isNull);
+  });
 }

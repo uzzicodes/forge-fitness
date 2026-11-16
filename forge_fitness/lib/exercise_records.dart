@@ -28,6 +28,13 @@ class RecordedSet {
   }
 }
 
+class TrendPoint {
+  final String date;
+  final double value;
+  final RecordedSet set;
+  const TrendPoint(this.date, this.value, this.set);
+}
+
 class ExerciseRecordSummary {
   final Exercise exercise;
   final String selectedDate;
@@ -84,6 +91,35 @@ class ExerciseRecordSummary {
         prior = previousBest;
     return current != null && (prior == null || compare(current, prior) > 0);
   }
+
+  /// One point per training day: that day's best set under the same rule the
+  /// PR uses (load, reps/hold, or assistance). Oldest first, most recent
+  /// [limit] days. Read-only view of the same completed-set rows as the PR.
+  List<TrendPoint> trend({int limit = 12}) {
+    final points = <TrendPoint>[];
+    for (final date in sets.map((s) => s.date).toSet()) {
+      final top = strongest(sets.where((s) => s.date == date));
+      if (top == null) continue;
+      points.add(
+        TrendPoint(
+          date,
+          bodyweight ? top.reps.toDouble() : top.kg,
+          top,
+        ),
+      );
+    }
+    points.sort((a, b) => a.date.compareTo(b.date));
+    return points.length > limit
+        ? points.sublist(points.length - limit)
+        : points;
+  }
+
+  /// Axis label for [trend] values.
+  String get trendUnit => assisted
+      ? 'kg assistance (lower is better)'
+      : bodyweight
+      ? (timed ? 'seconds' : 'reps')
+      : 'kg';
 
   bool get newAddedPr {
     final current = strongest(

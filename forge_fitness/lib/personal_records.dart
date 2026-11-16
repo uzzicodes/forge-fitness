@@ -165,6 +165,8 @@ Future<void> showPersonalRecord(
               Text(r.addedBest!.describe(r.exercise)),
               small('Recorded ${prettyDay(DateTime.parse(r.addedBest!.date))}'),
             ],
+            gap(20),
+            PrTrendChart(records: r),
             gap(18),
             small(
               'Only checked, completed sets count. The workout can still be in progress. Reopening, correcting or deleting a set recalculates its PR. Historical days show records up to that date; future logs never count.',
@@ -268,4 +270,138 @@ class PersonalRecordsScreen extends StatelessWidget {
       },
     ),
   );
+}
+
+/// Per-exercise trend of each day's best completed set. Drawn with a
+/// CustomPainter so it adds no package and works offline in the PWA.
+class PrTrendChart extends StatelessWidget {
+  final ExerciseRecordSummary records;
+  const PrTrendChart({super.key, required this.records});
+  @override
+  Widget build(BuildContext context) {
+    final points = records.trend();
+    if (points.length < 2) {
+      return small(
+        'Trend · appears after two training days with a completed set for this exercise.',
+      );
+    }
+    final first = points.first, last = points.last;
+    final change = last.value - first.value;
+    final better = records.assisted ? change < 0 : change > 0;
+    final unit = records.trendUnit;
+    String fmt(double v) => recordNumber(v);
+    final summary = change == 0
+        ? 'No change over ${points.length} sessions'
+        : '${change > 0 ? '+' : '−'}${fmt(change.abs())} ${records.bodyweight ? unit : 'kg'} over ${points.length} sessions';
+    return Semantics(
+      label:
+          'Trend for ${records.exercise.name}: from ${fmt(first.value)} to ${fmt(last.value)} $unit across ${points.length} sessions.',
+      excludeSemantics: true,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Trend',
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800),
+                ),
+              ),
+              Text(
+                summary,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: change == 0 || !better ? muted : lime,
+                ),
+              ),
+            ],
+          ),
+          gap(4),
+          small('Best set each training day · $unit'),
+          gap(10),
+          SizedBox(
+            height: 140,
+            width: double.infinity,
+            child: CustomPaint(
+              painter: _TrendPainter(
+                points.map((p) => p.value).toList(),
+                lowerIsBetter: records.assisted,
+              ),
+            ),
+          ),
+          gap(6),
+          Row(
+            children: [
+              small(prettyDay(DateTime.parse(first.date))),
+              const Spacer(),
+              small(prettyDay(DateTime.parse(last.date))),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TrendPainter extends CustomPainter {
+  final List<double> values;
+  final bool lowerIsBetter;
+  _TrendPainter(this.values, {required this.lowerIsBetter});
+  @override
+  void paint(Canvas canvas, Size size) {
+    const labelWidth = 34.0, padY = 10.0;
+    final chartW = size.width - labelWidth, chartH = size.height - padY * 2;
+    var lo = values.reduce((a, b) => a < b ? a : b),
+        hi = values.reduce((a, b) => a > b ? a : b);
+    if (hi == lo) {
+      hi += 1;
+      lo = lo - 1 < 0 ? 0.0 : lo - 1;
+    }
+    double y(double v) => padY + chartH * (1 - (v - lo) / (hi - lo));
+    double x(int i) =>
+        labelWidth + (values.length == 1 ? 0 : chartW * i / (values.length - 1));
+    final grid = Paint()
+      ..color = line
+      ..strokeWidth = 1;
+    for (final v in [lo, hi]) {
+      canvas.drawLine(Offset(labelWidth, y(v)), Offset(size.width, y(v)), grid);
+      final tp = TextPainter(
+        text: TextSpan(
+          text: recordNumber(v),
+          style: const TextStyle(fontSize: 10, color: muted),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout(maxWidth: labelWidth - 4);
+      tp.paint(canvas, Offset(0, y(v) - tp.height / 2));
+    }
+    final path = Path()..moveTo(x(0), y(values[0]));
+    for (var i = 1; i < values.length; i++) {
+      path.lineTo(x(i), y(values[i]));
+    }
+    canvas.drawPath(
+      path,
+      Paint()
+        ..color = lime
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.5
+        ..strokeJoin = StrokeJoin.round,
+    );
+    final dot = Paint()..color = lime;
+    for (var i = 0; i < values.length; i++) {
+      canvas.drawCircle(Offset(x(i), y(values[i])), i == values.length - 1 ? 4.5 : 3, dot);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_TrendPainter old) =>
+      old.lowerIsBetter != lowerIsBetter || !_same(old.values, values);
+  static bool _same(List<double> a, List<double> b) {
+    if (a.length != b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+      if (a[i] != b[i]) return false;
+    }
+    return true;
+  }
 }
