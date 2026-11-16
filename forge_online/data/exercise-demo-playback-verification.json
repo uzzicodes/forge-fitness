@@ -1,0 +1,54 @@
+{
+  "engine": "Microsoft Edge headless / Chromium",
+  "checkedAt": "2026-10-27T15:56:22.517Z",
+  "results": [
+    {
+      "id": "bench",
+      "duration": 15,
+      "width": 855,
+      "height": 470,
+      "time": 0,
+      "advanced": true
+    },
+    {
+      "id": "lateral",
+      "duration": 10,
+      "width": 640,
+      "height": 360,
+      "time": 0,
+      "advanced": true
+    },
+    {
+      "id": "triceps",
+      "duration": 10,
+      "width": 640,
+      "height": 360,
+      "time": 0,
+      "advanced": true
+    },
+    {
+      "id": "row",
+      "duration": 10,
+      "width": 640,
+      "height": 360,
+      "time": 0,
+      "advanced": true
+    },
+    {
+      "id": "shoulder",
+      "duration": 10,
+      "width": 640,
+      "height": 360,
+      "time": 0,
+      "advanced": true
+    },
+    {
+      "id": "curl",
+      "duration": 10,
+      "width": 640,
+      "height": 360,
+      "time": 0,
+      "advanced": true
+    }
+  ]
+}

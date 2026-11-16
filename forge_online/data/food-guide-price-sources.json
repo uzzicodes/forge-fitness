@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-10-28",
+  "currency": "PKR",
+  "sources": [
+    {
+      "id": "pbs-spi-20261022",
+      "title": "PBS SPI Annexure: consumer prices for week ended 22 October 2026",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_22.10.2026.xlsx",
+      "observedDate": "2026-10-22",
+      "note": "Appendix-A LOWER header row119 labels M119 as National Average; row120 M/N/O are MIN/AVG/MAX. Top header row3 M/O are Sialkot and were NOT used. National data rows start123, with M/O at zero-based indices12/14. Re-audited every included item by independently taking min across positive city MINs and max across positive city MAXs for all17 cities: first7 cities at row=item+6, next7 at row=item+64, final3 at row=item+122; city MIN indices3+3*c and MAX indices5+3*c. All9 included item ranges exactly matched lower-block M/O. Covers50 markets in17 cities. Gram pulse is not used for whole chickpeas. This is an observed survey range, not a promise for every shop."
+    },
+    {
+      "id": "alfatah-chicken",
+      "title": "Al-Fatah boneless chicken breast, Faisalabad, 1 kg",
+      "url": "https://alfatah.pk/products/chicken-breast-boneless-lahore-only-1-kg-333",
+      "observedDate": "2026-10-28",
+      "note": "Direct Shopify product .js endpoint returned 1 KG price 117300 paisa (PKR 1,173); 500 GM 58650 paisa. A single branch-specific quote; no live-broiler conversion."
+    },
+    {
+      "id": "alfatah-oats",
+      "title": "Al-Fatah Nature’s Own white oats pouch, 1,000 g",
+      "url": "https://alfatah.pk/products/natures-own-cereal-white-oats-pouch-1000-gm",
+      "observedDate": "2026-10-28",
+      "note": "Direct product .js returned price 84500 paisa (PKR 845) for 1,000 g. Single product quote; other brands and smaller packs differ."
+    },
+    {
+      "id": "alfatah-chana",
+      "title": "Al-Fatah white chana bareek, 1 kg",
+      "url": "https://alfatah.pk/products/white-chana-bareek-zb-1-kg",
+      "observedDate": "2026-10-28",
+      "note": "Direct product .js returned 31500 paisa (PKR 315) for whole white chana 1 kg. This replaces the older indexed PKR285 quote and is distinct from split daal chana."
+    },
+    {
+      "id": "alfatah-dates",
+      "title": "Al-Fatah AUK Premium Zehdi dates, 500 g",
+      "url": "https://alfatah.pk/products/auk-premium-zehdi-dates-500gm",
+      "observedDate": "2026-10-28",
+      "note": "Direct product .js returned 33500 paisa (PKR335) per 500 g; normalized to PKR670/kg. Typical edible dates; premium Ajwa/Mabroom prices are not substituted."
+    },
+    {
+      "id": "zaroori-peanuts",
+      "title": "Zaroori Saman shelled peanuts, 1 kg",
+      "url": "https://www.zaroorisaman.com/shop/dryfruit/momphali-peanut-without-shell-1-kg/",
+      "observedDate": "2026-10-28",
+      "note": "Fetched primary product page displays sale PKR1,350 and crossed-out PKR1,400, additional information weight 1 kg. Uses current displayed sale quote only; no shell-yield assumption. Unrelated seller health claims were not used."
+    }
+  ],
+  "prices": {
+    "eggs": {
+      "low": 240.0,
+      "high": 280.0,
+      "unit": "dozen",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Farm eggs, original survey unit 1 dozen."
+    },
+    "milk": {
+      "low": 170.0,
+      "high": 280.0,
+      "unit": "litre",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Loose fresh unboiled milk, original survey unit 1 litre. Packaged milk can cost more; heat/store safely."
+    },
+    "yogurt": {
+      "low": 190.0,
+      "high": 400.0,
+      "unit": "kg",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Loose plain dahi, original survey unit 1 kg; not Greek/high-protein yogurt."
+    },
+    "masoor": {
+      "low": 230.0,
+      "high": 330.0,
+      "unit": "kg",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Dry washed masoor, original survey unit 1 kg. Cooked serving cost requires a declared dry-to-cooked yield."
+    },
+    "atta": {
+      "low": 110.0,
+      "high": 177.0,
+      "unit": "kg",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Wheat flour original survey unit 20 kg bag; divided by20. This is a bag-equivalent per-kg cost; small loose purchases may cost more."
+    },
+    "rice": {
+      "low": 110.0,
+      "high": 200.0,
+      "unit": "kg",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Dry ordinary IRRI-6/9 rice, original survey unit 1 kg; not premium basmati."
+    },
+    "banana": {
+      "low": 80.0,
+      "high": 260.0,
+      "unit": "dozen",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Local bananas, original survey unit 1 dozen; fruit size and edible yield vary."
+    },
+    "potato": {
+      "low": 30.0,
+      "high": 90.0,
+      "unit": "kg",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Raw potatoes, original survey unit 1 kg; peeling/cooking yield varies."
+    },
+    "oil": {
+      "low": 618.0,
+      "high": 623.0,
+      "unit": "litre",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "basis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Dalda or similar cooking oil, original survey unit a 5 litre tin; divided by5."
+    },
+    "chana": {
+      "low": 315,
+      "high": 315,
+      "unit": "kg",
+      "sourceIds": [
+        "alfatah-chana"
+      ],
+      "basis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Whole dry white chickpeas; original unit1 kg. Not split gram pulse. Shipping, cooking fuel and extras excluded."
+    },
+    "chicken": {
+      "low": 1173,
+      "high": 1173,
+      "unit": "kg",
+      "sourceIds": [
+        "alfatah-chicken"
+      ],
+      "basis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Raw boneless breast; original unit1 kg, branch Faisalabad. Cooked serving cost requires an explicit raw-to-cooked yield. Shipping, cooking fuel and extras excluded."
+    },
+    "oats": {
+      "low": 845,
+      "high": 845,
+      "unit": "kg",
+      "sourceIds": [
+        "alfatah-oats"
+      ],
+      "basis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Plain white oats; original pack1,000g. Shipping, cooking fuel and extras excluded."
+    },
+    "peanuts": {
+      "low": 1350,
+      "high": 1350,
+      "unit": "kg",
+      "sourceIds": [
+        "zaroori-peanuts"
+      ],
+      "basis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Shelled peanuts; original unit1kg. No shell conversion. Shipping, cooking fuel and extras excluded."
+    },
+    "dates": {
+      "low": 670,
+      "high": 670,
+      "unit": "kg",
+      "sourceIds": [
+        "alfatah-dates"
+      ],
+      "basis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Zehdi dates; original pack500g at PKR335; multiplied by2. Shipping, cooking fuel and extras excluded."
+    }
+  }
+}

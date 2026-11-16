@@ -1,0 +1,14 @@
+{
+  "engine": "Isolated Edge phone and desktop, anonymous service with synthetic D1; offline guest reload",
+  "checks": [
+    "Anonymous landing starts guest onboarding and a complete training/nutrition profile without an auth redirect",
+    "Guest text estimates use the free parser and save exactly one local meal only after confirmation",
+    "Guest mode and progress survive a clean app reload without the guest query parameter",
+    "Guest settings clearly explain device storage, separate cloud profiles and export/restore backups",
+    "Cached guest app reloads offline and accepts another water log without a login or sync queue",
+    "Guest journey makes only public reference requests, writes no cloud user records and spends no AI quota",
+    "Existing direct app link offers no-login access; a fresh browser does not inherit another guest profile"
+  ],
+  "errors": [],
+  "completedAt": "2026-10-30T20:53:29.034Z"
+}

@@ -1,0 +1,27 @@
+- group:
+  - text: FORGE SYNCED T MAKE IT YOURS Your foundation. Test Athlete 75 kg · 178 cm · 25 years
+  - button "Edit profile"
+  - text: Build muscle Full gym 5 days / week 2600 kcal / 120 g protein daily These are starting targets. You can edit them in your profile. Meal estimates connection Your online account keeps nutrition and training private. The food database and small photo matcher are free. A Gemini API key is optional for mixed-meal estimates.
+  - button "Optional Gemini setup"
+  - text: "Account sync: Synced"
+  - button "Sync now"
+  - text: The food database is ready. Gemini is optional.
+  - button "Check connection"
+  - text: This online app works without your PC. The small photo matcher runs in your browser; Gemini receives a photo only if you request that option. Images are not archived. Use FORGE on iPhone Open this site in Safari → Share → Add to Home Screen. Your computer can be off. Open the Home Screen app while connected and wait for Offline ready before testing offline access.
+  - button "iPhone setup guide"
+  - text: Your data belongs to you. Your profile, nutrition, workouts, attendance and check-ins sync to your private account online. Offline changes are queued on this device. Keep a backup before clearing browser storage. Photos are not retained.
+  - button "Export backup"
+  - button "Restore backup"
+  - button "Sign out"
+  - text: How your plan is built Calories use Mifflin–St Jeor resting energy × your activity factor, plus 200 kcal for the muscle-building goal. Other goals use estimated maintenance. Protein starts at 1.6 g per kg of profile bodyweight. Choose 2–5 preferred training days. Five days use push, pull, legs, upper and lower sessions; shorter schedules use full-body or upper/lower sessions. Only a completed workout advances the sequence; rest or missed days keep the next session waiting. Equipment and experience select the exercises and number of sets. These are editable starting templates, with no automatic load increases.
+  - button "Calorie formula · original research ↗"
+  - button "Protein & exercise · ISSN position stand ↗"
+  - button "Resistance training · ACSM guidance ↗"
+  - text: FORGE 1.0 · BUILT FOR YOUR EVERYDAY
+- tablist:
+  - tab "Today"
+  - tab "Food"
+  - tab "Train"
+  - tab "Progress"
+  - tab "Settings" [selected]
+- text: Offline ready · AI estimates still need a connection

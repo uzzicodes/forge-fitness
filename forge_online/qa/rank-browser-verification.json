@@ -1,0 +1,14 @@
+{
+  "engine": "Isolated Edge, phone and desktop; synthetic API only, no personal data touched",
+  "checks": [
+    "Current rank emblem is above the greeting and opens the ladder",
+    "Phone rank badge and existing workout XP render",
+    "Scrollable rank ladder reaches Radiant",
+    "Real finish action syncs completion and shows +60 XP and Iron II promotion",
+    "Reopening and finishing restores 120 total XP without duplicate points",
+    "Rank survives a fresh reload from synchronized records",
+    "Cached app and rank remain usable after an offline reload"
+  ],
+  "errors": [],
+  "completedAt": "2026-10-28T12:58:15.126Z"
+}

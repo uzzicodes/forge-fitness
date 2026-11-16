@@ -1,0 +1,46 @@
+# --- Secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cer
+*.crt
+*.csr
+*.srl
+*.p12
+*.pfx
+*.jks
+*.keystore
+**/certs/
+.dev.vars
+.dev.vars.*
+secrets/
+*credentials*.json
+!**/test/**/*credentials*.json
+
+# --- Dependencies / build output / caches ---
+node_modules/
+.pnpm-store/
+dist/
+.next/
+.wrangler/
+.vinext/
+.sites-runtime/
+tsconfig.tsbuildinfo
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.iml
+.idea/
+.vscode/
+android/.gradle/
+android/local.properties
+android/key.properties
+
+# --- OS / logs ---
+.DS_Store
+Thumbs.db
+*.log

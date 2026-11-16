@@ -1,0 +1,34 @@
+- text: FORGE
+- button "Overview Tab 1 of 5"
+- button "Nutrition Tab 2 of 5"
+- button "Training Tab 3 of 5"
+- button "Progress Tab 4 of 5"
+- button "Settings Tab 5 of 5"
+- group:
+  - text: YOUR EVERYDAY. UPGRADED. QUEUED T LET’S GET AFTER IT Hey, Test Athlete.
+  - button "Log a meal"
+  - button "Previous day"
+  - button "Today · 27 Oct"
+  - button "Next day" [disabled]
+  - text: THE WORK IS WORTH IT DAILY FUEL YOUR TARGETS Build strength. Fuel the change.
+  - progressbar "30"
+  - text: 787 / 2600 kcal
+  - progressbar "24"
+  - text: 28 / 120 g 5 days a week. One stronger you. CALORIES PROTEIN
+  - button "Your training plan"
+  - text: 1813 kcal · 92 g protein remaining On the menu today
+  - button "View nutrition →"
+  - text: Snap it. Check it. Log it. A photo, a portion, a little more progress.
+  - button "Log a meal"
+  - button "banana shake Lunch · USDA reference 262 kcal 9.4 g protein"
+  - button "banana shake Lunch · USDA reference 262 kcal 9.4 g protein"
+  - text: "Your next move Recovery is part of the plan. REST DAY Are you training today? Your first session is ready when you are. Next in your sequence: Push · chest & shoulders Resting or missing a day keeps the next session in place. Finish a workout to move forward."
+  - button "I’m training"
+  - button "Rest today"
+  - text: RECOVER TUESDAY Rest & recovery Your next workout stays in the queue. 20–30 min easy walk
+  - button "Recovery guide"
+  - text: Small habits. Big returns. Water 0.00 L
+  - button "Remove 250 ml" [disabled]
+  - button "Add 250 ml"
+  - text: Each glass is 250 ml. Log what you drink; needs vary.
+- text: Meal saved. Daily totals updated.

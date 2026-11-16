@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "360px phone shows meal count, personal macro/water progress and specific next steps",
+    "Closed week counts Saturday make-up, explains one protein gap and applies exactly 5 XP once",
+    "Recovery choice syncs and survives reload; completed week deduction is unchanged"
+  ],
+  "errors": [],
+  "engine": "Isolated Edge, real app/service with synthetic account and Pakistan timezone",
+  "completedAt": "2026-10-29T10:17:11.753Z"
+}

@@ -1,0 +1,18 @@
+{
+  "origin": "https://forge-fitness-fuel.jazzylark16.chatgpt.site",
+  "checkedAt": "2026-10-27T16:48:20.871Z",
+  "checks": [
+    "Root routes to managed sign-in",
+    "/api/status rejects unauthenticated access",
+    "/api/state rejects unauthenticated access",
+    "7,793 USDA references and 98 Pakistani food/recipe references imported",
+    "Hosted trained model checksum matches",
+    "HTML preserves the tested app bootstrap plus the hosting bridge",
+    "/fitness/main.dart.js matches the tested release",
+    "/forge-sw.js matches the tested release",
+    "/vision/vision.js matches the tested release",
+    "/demos/manifest.json matches the tested release",
+    "All six hosted H.264 clips serve correctly; 22 demo mappings available"
+  ],
+  "completedAt": "2026-10-27T16:48:44.763Z"
+}

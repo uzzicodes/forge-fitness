@@ -1,0 +1,33 @@
+- group:
+  - text: FORGE OFFLINE · QUEUED T LET’S GET AFTER IT Hey, Test Athlete.
+  - button "Previous day"
+  - button "Today · 27 Oct"
+  - button "Next day" [disabled]
+  - text: DAILY FUEL YOUR TARGETS
+  - progressbar "30"
+  - text: 787 / 2600 kcal
+  - progressbar "24"
+  - text: 28 / 120 g CALORIES PROTEIN 1813 kcal · 92 g protein remaining THE WORK IS WORTH IT Build strength. Fuel the change. 5 days a week. One stronger you.
+  - button "Your training plan"
+  - text: On the menu today
+  - button "View nutrition →"
+  - text: Snap it. Check it. Log it. A photo, a portion, a little more progress.
+  - button "Log a meal"
+  - button "banana shake Lunch · USDA reference 262 kcal 9.4 g protein"
+  - button "banana shake Lunch · USDA reference 262 kcal 9.4 g protein"
+  - text: Your next move 5 exercises · Full gym WORKOUT COMPLETE You showed up. Session saved. Your next workout will follow this completed session. Resting or missing a day keeps the next session in place. Finish a workout to move forward.
+  - button "View completed workout →"
+  - text: TRAIN TUESDAY Push · chest & shoulders Your saved workout 35–55 min · 2 sets / exercise
+  - button "Open workout"
+  - text: Small habits. Big returns. Water 0.75 L
+  - button "Remove 250 ml"
+  - button "Add 250 ml"
+  - text: Each glass is 250 ml. Log what you drink; needs vary.
+- button "Log meal"
+- tablist:
+  - tab "Today" [selected]
+  - tab "Food"
+  - tab "Train"
+  - tab "Progress"
+  - tab "Settings"
+- text: Offline ready · AI estimates still need a connection

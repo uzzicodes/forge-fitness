@@ -1,0 +1,41 @@
+{
+  "_id": "635a955af9a004065f2e8b86",
+  "id": "AlexKoff88/mobilenet_v2_food101",
+  "private": false,
+  "tags": [
+    "pytorch",
+    "onnx",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 0,
+  "modelId": "AlexKoff88/mobilenet_v2_food101",
+  "author": "AlexKoff88",
+  "sha": "7d05d3878ee7f2aad7ad159018a8e5fdb4953d41",
+  "lastModified": "2022-11-18T11:19:04Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "apache-2.0"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "mobilenet_v2_food101.onnx"
+    },
+    {
+      "rfilename": "pytorch_model.bin"
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2022-10-27T14:27:38Z",
+  "usedStorage": 28956869
+}

@@ -1,0 +1,38 @@
+- button "Back"
+- heading "Your training" [level=2]
+- text: COMPLETE
+- group:
+  - group "02 Dumbbell shoulder press Shoulders · triceps 2 SETS 8–12 REPS 90s REST SET 1 SET 2":
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+  - group "03 Dumbbell lateral raise Shoulders 2 SETS 10–15 REPS 60s REST SET 1 SET 2":
+    - button "Form preview"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+  - group "04 Dumbbell triceps extension Triceps 2 SETS 10–15 REPS 60s REST SET 1 SET 2":
+    - button "Form preview"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+  - group "05 Forearm plank Core 2 SETS 20–40 sec 60s REST SET 1 SET 2":
+    - button "Form preview"
+    - textbox "Seconds" [disabled]
+    - textbox "Added kg" [disabled]
+    - button "Reopen set"
+    - textbox "Seconds" [disabled]
+    - textbox "Added kg" [disabled]
+    - button "Reopen set"
+  - button "Reopen workout"
+  - text: Choose a load that leaves 2–3 reps in reserve. The goal is steady progress with controlled form. Weight is the barbell total or one dumbbell; stay consistent in how you log it.
+- text: Workout complete. Keep showing up.

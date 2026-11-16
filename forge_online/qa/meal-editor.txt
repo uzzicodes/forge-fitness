@@ -1,0 +1,25 @@
+- group:
+  - text: Fuel your progress.
+  - button "Close"
+  - text: Tuesday, 27 Oct
+  - textbox "What did you eat?"
+  - text: 500 characters remaining Enter a food name, choose a photo, or use both.
+  - button "Choose photo"
+  - textbox "Serving & ingredients (optional)"
+  - text: 700 characters remaining Leave blank for an estimated typical serving. The assumed recipe and portion will be shown for review.
+  - button "Free food & portion calculator"
+  - text: No API key needed. The small photo matcher suggests 101 supported dishes; choose the food and serving you actually ate. For other foods, type the name. Photos are not archived.
+  - 'checkbox "Optional Gemini estimate: send this food name, notes and photo to Google. Free-tier input may be used to improve Google products."'
+  - button "Gemini estimate (optional)" [disabled]
+  - text: REVIEW THE ESTIMATE BELOW · OR ENTER VALUES FROM A LABEL
+  - textbox "Meal name"
+  - text: 100 characters remaining
+  - button "Meal Lunch"
+  - textbox "Calories · kcal"
+  - textbox "Protein · g"
+  - textbox "Carbs · g"
+  - textbox "Fat · g"
+  - textbox "Portion & notes (optional)"
+  - text: 2000 characters remaining
+  - button "Confirm & add to my day"
+- text: Offline ready · AI estimates still need a connection

@@ -1,0 +1,21 @@
+{
+  "engine": "Isolated Edge phone and desktop; synthetic personal APIs, real bundled guide data",
+  "checks": [
+    "Dedicated food-guide page opens from Daily Fuel",
+    "Food card includes an accessible food photograph on a phone viewport",
+    "Browsing and cancelling the serving review never log a meal",
+    "Explicit confirmation logs the stated two-egg portion and syncs its macros",
+    "All 14 bundled food photographs are saved in the offline app cache",
+    "Cached guide and local filtering work offline; protein/energy categories stay distinct",
+    "Four ingredient photographs render for the shake while offline",
+    "Both primary text fonts are bundled in the offline cache; labels verified in the offline screenshot"
+  ],
+  "errors": [],
+  "failedRequests": [
+    "https://fonts.gstatic.com/s/roboto/v32/KFOmCnqEu92Fr1Me4GZLCzYlKw.woff2",
+    "http://127.0.0.1:5173/api/status",
+    "http://127.0.0.1:5173/api/local-pair",
+    "https://fonts.gstatic.com/s/notosanssymbols/v43/rP2up3q65FkAtHfwd-eIS2brbDN6gxP34F9jRRCe4W3gfQ8gb_VFRkzrbQ.woff2"
+  ],
+  "completedAt": "2026-10-28T22:49:39.560Z"
+}

@@ -1,0 +1,24 @@
+- button "Back"
+- heading "Your check-in" [level=2]
+- group:
+  - button "Previous check-in day Previous check-in day"
+  - text: Wednesday, 28 Oct
+  - button "Next check-in day"
+  - text: 0 meals logged Progress from your saved entries. Nutrition and water targets are personal; meal count is information, not a minimum to earn points. Protein 0.0 / 120 g
+  - progressbar "0"
+  - text: Calories 0 / 2000 kcal
+  - progressbar "0"
+  - text: Water 0 / 2000 ml
+  - progressbar "0"
+  - text: "Calorie range: 1800–2200 kcal (±10%). Protein and water use your full saved targets. 2,000 ml is eight 250 ml glasses; your water target can be edited. Your next steps This day is finished. Add or correct any missing entries for the date they actually happened. No meals are logged yet. Start by recording what you already ate; meal count itself is not a nutrition target. About 120 g protein remains. Eggs, chicken, dal/chana or plain dahi can help with your next meal. About 2000 kcal remains to your calorie target. Plan a balanced meal or snack that fits your goal. About 2000 ml remains to your saved water goal. Spread drinks across the day instead of trying to catch up all at once. Weekly scorecard 26 Oct – 1 Nov 0 / 5 workouts completed Any Monday–Sunday workout counts, including a Saturday or Sunday make-up session. Daily rest choices do not deduct training XP. At most one completed workout per date counts."
+  - button "Monday no completed workout, fuel targets incomplete M 26"
+  - button "Tuesday no completed workout, fuel targets incomplete T 27"
+  - button "Wednesday no completed workout, fuel targets incomplete W 28"
+  - button "Thursday no completed workout, fuel targets incomplete T 29"
+  - button "Friday no completed workout, upcoming F 30"
+  - button "Saturday no completed workout, upcoming S 31"
+  - button "Sunday no completed workout, upcoming S 1"
+  - text: "Week in progress: no XP deducted yet. Training is assessed only after Sunday ends. 9 completed-day fuel gaps are currently recorded. This week’s XP targets: 5 sessions · 120 g protein/day · 2000 kcal/day ±10% · 2000 ml water/day. These targets are saved for the week. Target edits apply to the next week’s score. Today’s check-in uses your current profile; past check-ins use the saved weekly targets. Your XP balance 515 rank XP 520 earned · 5 weekly deductions Weeks close after Sunday in your saved UTC+05:00 clock. Reloading does not deduct again. Corrections to past logs recalculate that week and can restore XP. Unlogged days count as incomplete; the app cannot know what you did without an entry."
+  - checkbox "Recovery week Illness, injury or travel · pauses deductions for the open week beginning 26 Oct. Closed weeks stay in the history."
+  - text: Recent completed weeks 19 Oct · 5/5 workouts 1 protein · 0 calorie · 0 water gaps −5 XP
+  - button "Weekly XP rules"

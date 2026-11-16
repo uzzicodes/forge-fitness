@@ -1,0 +1,12 @@
+{
+  "engine": "Isolated Edge phone/desktop, real service with synthetic D1 account",
+  "checks": [
+    "Workout card shows exercise-specific PR and previous session; tapping reveals both saved sets and dates",
+    "Saving a real completed set updates the PR immediately and syncs the underlying set normally",
+    "Reopening removes the new record and saving again restores it without an extra PR XP award",
+    "A fresh cloud reload derives the same personal record from the saved session",
+    "Progress opens a full PR list with separate machine and barbell records at phone and desktop widths"
+  ],
+  "errors": [],
+  "completedAt": "2026-10-31T20:22:01.659Z"
+}

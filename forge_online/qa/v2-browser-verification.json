@@ -1,0 +1,15 @@
+{
+  "engine": "Edge/Chromium at 390×844, not physical Safari",
+  "checks": [
+    "One natural-language message, preview, explicit confirmation, nutrition persistence",
+    "Natural water quantities update hydration without a fake meal",
+    "Unclear food requires clarification",
+    "Opt-in habit, daily completion, XP and private sync",
+    "Lean physique plan selected and synced",
+    "Actual inline exercise video decodes and plays",
+    "Updated app reloads offline and queues/syncs changes",
+    "Optional photo, visible Google processing notice, review, confirmation and nutrition-only storage (controlled photo-response replay)"
+  ],
+  "errors": [],
+  "completedAt": "2026-10-27T16:24:12.581Z"
+}

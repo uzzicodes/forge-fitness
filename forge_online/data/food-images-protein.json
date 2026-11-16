@@ -1,0 +1,88 @@
+[
+  {
+    "id": "eggs",
+    "title": "Hard boiled egg 2",
+    "author": "3steph14",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hard_boiled_egg_2.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Hard_boiled_egg_2.jpg/500px-Hard_boiled_egg_2.jpg",
+    "asset": "assets/food-images/eggs.jpg",
+    "sha256": "cd004b69511adf86157444e343ef0683e391ec1469d90142e7ada68ef2fda4bc",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  },
+  {
+    "id": "chicken",
+    "title": "Grilled Chicken Breasts",
+    "author": "Sharon Chen",
+    "authorUrl": "https://www.delishplan.com/",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grilled_Chicken_Breasts_(28905381261).jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Grilled_Chicken_Breasts_%2828905381261%29.jpg/500px-Grilled_Chicken_Breasts_%2828905381261%29.jpg",
+    "asset": "assets/food-images/chicken.jpg",
+    "sha256": "f7df8aa3357b10d0d0077a93481b12e54af3053c77bc8170246c4543c1487fe0",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  },
+  {
+    "id": "masoor",
+    "title": "Masoor Dal in Dhaba Style",
+    "author": "Solehachikhalkar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masoor_Dal_in_Dhaba_Style.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Masoor_Dal_in_Dhaba_Style.jpg/330px-Masoor_Dal_in_Dhaba_Style.jpg",
+    "displayNote": "Cooked masoor dal shown with rice and garnish; nutrition below is for plain cooked lentils only.",
+    "asset": "assets/food-images/masoor.jpg",
+    "sha256": "96036368c5f949708392c5dc7763f8c9ce045dd3c9cafe7dd0c72dc323d71919",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  },
+  {
+    "id": "chana",
+    "title": "Chickpeas",
+    "author": "Jim Lukach",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chickpeas_(14068981304).jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Chickpeas_%2814068981304%29.jpg/960px-Chickpeas_%2814068981304%29.jpg",
+    "asset": "assets/food-images/chana.jpg",
+    "sha256": "9de197a4cfb2f54ccaa3dce8032925cb45578a7ec8bc5a6186270fe8c20c71b5",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  },
+  {
+    "id": "milk",
+    "title": "Milk glass",
+    "author": "Stefan Kühn",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milk_glass.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Milk_glass.jpg",
+    "asset": "assets/food-images/milk.jpg",
+    "sha256": "bc3e9601e8ebe974aead13f016eb9bf77dfd164dce302464671ce7dd48884d7d",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  },
+  {
+    "id": "yogurt",
+    "title": "Plain Yogurt",
+    "author": "Alabama Extension (ACES / Janet Guynn)",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plain_Yogurt.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Plain_Yogurt.jpg/960px-Plain_Yogurt.jpg",
+    "asset": "assets/food-images/yogurt.jpg",
+    "sha256": "9b3f6812019419636e16535f6e7f70ee349f314b6cefe1630a91a1489213dbb1",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  },
+  {
+    "id": "peanuts",
+    "title": "Peanuts (shelled raw marketed)",
+    "author": "David E Mead",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peanuts_(shelled_raw_marketed).jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Peanuts_%28shelled_raw_marketed%29.jpg/960px-Peanuts_%28shelled_raw_marketed%29.jpg",
+    "asset": "assets/food-images/peanuts.jpg",
+    "sha256": "a274df562fe6d0507a0de4912511957250787b4b3ed3c2b298e6c3e1c39c8c19",
+    "changes": "No local image modifications; Wikimedia source thumbnail or source image."
+  }
+]

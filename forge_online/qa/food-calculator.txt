@@ -1,0 +1,25 @@
+- group:
+  - text: Know your portions.
+  - button "Close food calculator"
+  - text: FREE · USDA FOOD DATABASE Choose the food and its weight or a reference serving. The app calculates nutrition for you.
+  - button "My saved recipes"
+  - textbox "Meal or recipe name"
+  - text: 88 characters remaining Bananas, raw
+  - button "Remove ingredient"
+  - textbox "Edible portion · grams"
+  - button "Or choose a USDA reference serving"
+  - button "View full nutrients per 100 g"
+  - text: Milk, whole, 3.25% milkfat, with added vitamin D
+  - button "Remove ingredient"
+  - textbox "Edible portion · grams"
+  - button "Or choose a USDA reference serving"
+  - button "View full nutrients per 100 g"
+  - textbox "Find an ingredient"
+  - button "Search foods"
+  - text: No matching result yet. Try a simpler food name or use Gemini for a mixed dish.
+  - textbox "Servings in this whole recipe"
+  - text: PER SERVING 262 kcal · 9.4 g protein 39.3 g carbs · 8.8 g fat
+  - checkbox "Save this recipe to my account" [checked]
+  - button "Use these nutrition values"
+  - text: Reference values vary by preparation and brand. Weigh edible food and match raw or cooked foods carefully. This calculates one serving; it does not add a meal until you confirm it in the meal editor.
+- text: Offline ready · AI estimates still need a connection

@@ -1,0 +1,1033 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-28",
+  "currency": "PKR",
+  "nutritionSource": {
+    "title": "USDA FoodData Central SR Legacy",
+    "url": "https://fdc.nal.usda.gov/download-datasets/"
+  },
+  "sources": [
+    {
+      "id": "pbs-spi-20261022",
+      "title": "PBS SPI Annexure: consumer prices for week ended 22 October 2026",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_22.10.2026.xlsx",
+      "observedDate": "2026-10-22",
+      "note": "Appendix-A LOWER header row119 labels M119 as National Average; row120 M/N/O are MIN/AVG/MAX. Top header row3 M/O are Sialkot and were NOT used. National data rows start123, with M/O at zero-based indices12/14. Re-audited every included item by independently taking min across positive city MINs and max across positive city MAXs for all17 cities: first7 cities at row=item+6, next7 at row=item+64, final3 at row=item+122; city MIN indices3+3*c and MAX indices5+3*c. All9 included item ranges exactly matched lower-block M/O. Covers50 markets in17 cities. Gram pulse is not used for whole chickpeas. This is an observed survey range, not a promise for every shop."
+    },
+    {
+      "id": "alfatah-chicken",
+      "title": "Al-Fatah boneless chicken breast, Faisalabad, 1 kg",
+      "url": "https://alfatah.pk/products/chicken-breast-boneless-lahore-only-1-kg-333",
+      "observedDate": "2026-10-28",
+      "note": "Direct Shopify product .js endpoint returned 1 KG price 117300 paisa (PKR 1,173); 500 GM 58650 paisa. A single branch-specific quote; no live-broiler conversion."
+    },
+    {
+      "id": "alfatah-oats",
+      "title": "Al-Fatah Nature’s Own white oats pouch, 1,000 g",
+      "url": "https://alfatah.pk/products/natures-own-cereal-white-oats-pouch-1000-gm",
+      "observedDate": "2026-10-28",
+      "note": "Direct product .js returned price 84500 paisa (PKR 845) for 1,000 g. Single product quote; other brands and smaller packs differ."
+    },
+    {
+      "id": "alfatah-chana",
+      "title": "Al-Fatah white chana bareek, 1 kg",
+      "url": "https://alfatah.pk/products/white-chana-bareek-zb-1-kg",
+      "observedDate": "2026-10-28",
+      "note": "Direct product .js returned 31500 paisa (PKR 315) for whole white chana 1 kg. This replaces the older indexed PKR285 quote and is distinct from split daal chana."
+    },
+    {
+      "id": "alfatah-dates",
+      "title": "Al-Fatah AUK Premium Zehdi dates, 500 g",
+      "url": "https://alfatah.pk/products/auk-premium-zehdi-dates-500gm",
+      "observedDate": "2026-10-28",
+      "note": "Direct product .js returned 33500 paisa (PKR335) per 500 g; normalized to PKR670/kg. Typical edible dates; premium Ajwa/Mabroom prices are not substituted."
+    },
+    {
+      "id": "zaroori-peanuts",
+      "title": "Zaroori Saman shelled peanuts, 1 kg",
+      "url": "https://www.zaroorisaman.com/shop/dryfruit/momphali-peanut-without-shell-1-kg/",
+      "observedDate": "2026-10-28",
+      "note": "Fetched primary product page displays sale PKR1,350 and crossed-out PKR1,400, additional information weight 1 kg. Uses current displayed sale quote only; no shell-yield assumption. Unrelated seller health claims were not used."
+    }
+  ],
+  "foods": [
+    {
+      "id": "eggs",
+      "name": "Boiled eggs",
+      "portion": "2 large eggs · 100 g edible",
+      "fdcId": 173424,
+      "grams": 100,
+      "group": "Meat & eggs",
+      "proteinPick": true,
+      "caloriePick": false,
+      "notes": "Whole eggs include yolks. Frying oil is extra.",
+      "allergens": [
+        "Egg"
+      ],
+      "calories": 155,
+      "protein": 12.6,
+      "carbs": 1.1,
+      "fat": 10.6,
+      "priceLow": 40,
+      "priceHigh": 46.7,
+      "priceFactor": 0.16666666666666666,
+      "priceKey": "eggs",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Farm eggs, original survey unit 1 dozen.",
+      "images": [
+        {
+          "id": "eggs",
+          "title": "Hard boiled egg 2",
+          "author": "3steph14",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hard_boiled_egg_2.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Hard_boiled_egg_2.jpg/500px-Hard_boiled_egg_2.jpg",
+          "asset": "assets/food-images/eggs.jpg",
+          "sha256": "cd004b69511adf86157444e343ef0683e391ec1469d90142e7ada68ef2fda4bc",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Boiled eggs"
+        }
+      ]
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken breast",
+      "portion": "150 g cooked, skinless breast",
+      "fdcId": 171477,
+      "grams": 150,
+      "group": "Meat & eggs",
+      "proteinPick": true,
+      "caloriePick": false,
+      "notes": "Estimated from 200 g raw boneless breast at 75% cooked yield. Oil, sauces and sides are extra.",
+      "allergens": [],
+      "calories": 247.5,
+      "protein": 46.5,
+      "carbs": 0,
+      "fat": 5.4,
+      "priceLow": 234.6,
+      "priceHigh": 234.6,
+      "priceFactor": 0.2,
+      "priceKey": "chicken",
+      "sourceIds": [
+        "alfatah-chicken"
+      ],
+      "priceBasis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Raw boneless breast; original unit1 kg, branch Faisalabad. Cooked serving cost requires an explicit raw-to-cooked yield. Shipping, cooking fuel and extras excluded.",
+      "images": [
+        {
+          "id": "chicken",
+          "title": "Grilled Chicken Breasts",
+          "author": "Sharon Chen",
+          "authorUrl": "https://www.delishplan.com/",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grilled_Chicken_Breasts_(28905381261).jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Grilled_Chicken_Breasts_%2828905381261%29.jpg/500px-Grilled_Chicken_Breasts_%2828905381261%29.jpg",
+          "asset": "assets/food-images/chicken.jpg",
+          "sha256": "f7df8aa3357b10d0d0077a93481b12e54af3053c77bc8170246c4543c1487fe0",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Chicken breast"
+        }
+      ]
+    },
+    {
+      "id": "masoor",
+      "name": "Plain cooked masoor dal",
+      "portion": "1 cup · 198 g cooked",
+      "fdcId": 172421,
+      "grams": 198,
+      "group": "Plant sources",
+      "proteinPick": true,
+      "caloriePick": false,
+      "notes": "Cost assumes 70 g dry lentils yields 198 g cooked. Plain lentils; tadka and oil add calories.",
+      "allergens": [],
+      "calories": 229.7,
+      "protein": 17.9,
+      "carbs": 39.9,
+      "fat": 0.8,
+      "priceLow": 16.1,
+      "priceHigh": 23.1,
+      "priceFactor": 0.07,
+      "priceKey": "masoor",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Dry washed masoor, original survey unit 1 kg. Cooked serving cost requires a declared dry-to-cooked yield.",
+      "images": [
+        {
+          "id": "masoor",
+          "title": "Masoor Dal in Dhaba Style",
+          "author": "Solehachikhalkar",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masoor_Dal_in_Dhaba_Style.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Masoor_Dal_in_Dhaba_Style.jpg/330px-Masoor_Dal_in_Dhaba_Style.jpg",
+          "displayNote": "Cooked masoor dal shown with rice and garnish; nutrition below is for plain cooked lentils only.",
+          "asset": "assets/food-images/masoor.jpg",
+          "sha256": "96036368c5f949708392c5dc7763f8c9ce045dd3c9cafe7dd0c72dc323d71919",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Plain cooked masoor dal"
+        }
+      ]
+    },
+    {
+      "id": "chana",
+      "name": "Boiled chickpeas / chana",
+      "portion": "1 cup · 164 g cooked",
+      "fdcId": 173757,
+      "grams": 164,
+      "group": "Plant sources",
+      "proteinPick": true,
+      "caloriePick": false,
+      "notes": "Cost assumes 65 g dry whole chickpeas yields 164 g cooked. Chaat sauces, oil and sides are extra.",
+      "allergens": [],
+      "calories": 269,
+      "protein": 14.5,
+      "carbs": 45,
+      "fat": 4.2,
+      "priceLow": 20.5,
+      "priceHigh": 20.5,
+      "priceFactor": 0.065,
+      "priceKey": "chana",
+      "sourceIds": [
+        "alfatah-chana"
+      ],
+      "priceBasis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Whole dry white chickpeas; original unit1 kg. Not split gram pulse. Shipping, cooking fuel and extras excluded.",
+      "images": [
+        {
+          "id": "chana",
+          "title": "Chickpeas",
+          "author": "Jim Lukach",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chickpeas_(14068981304).jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Chickpeas_%2814068981304%29.jpg/960px-Chickpeas_%2814068981304%29.jpg",
+          "asset": "assets/food-images/chana.jpg",
+          "sha256": "9de197a4cfb2f54ccaa3dce8032925cb45578a7ec8bc5a6186270fe8c20c71b5",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Boiled chickpeas / chana"
+        }
+      ]
+    },
+    {
+      "id": "milk",
+      "name": "Whole milk",
+      "portion": "1 glass · 250 ml",
+      "fdcId": 171265,
+      "grams": 258,
+      "group": "Dairy",
+      "proteinPick": true,
+      "caloriePick": true,
+      "notes": "Whole cow milk reference at 3.25% fat, about 258 g per 250 ml. Buffalo milk and brands can differ.",
+      "allergens": [
+        "Milk"
+      ],
+      "calories": 157.4,
+      "protein": 8.1,
+      "carbs": 12.4,
+      "fat": 8.4,
+      "priceLow": 42.5,
+      "priceHigh": 70,
+      "priceFactor": 0.25,
+      "priceKey": "milk",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Loose fresh unboiled milk, original survey unit 1 litre. Packaged milk can cost more; heat/store safely.",
+      "images": [
+        {
+          "id": "milk",
+          "title": "Milk glass",
+          "author": "Stefan Kühn",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milk_glass.jpg",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Milk_glass.jpg",
+          "asset": "assets/food-images/milk.jpg",
+          "sha256": "bc3e9601e8ebe974aead13f016eb9bf77dfd164dce302464671ce7dd48884d7d",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Whole milk"
+        }
+      ]
+    },
+    {
+      "id": "yogurt",
+      "name": "Plain dahi / yogurt",
+      "portion": "1 bowl · 200 g",
+      "fdcId": 171284,
+      "grams": 200,
+      "group": "Dairy",
+      "proteinPick": true,
+      "caloriePick": false,
+      "notes": "Plain, unsweetened whole-milk yogurt. Strained yogurt and local milk types differ.",
+      "allergens": [
+        "Milk"
+      ],
+      "calories": 122,
+      "protein": 6.9,
+      "carbs": 9.3,
+      "fat": 6.5,
+      "priceLow": 38,
+      "priceHigh": 80,
+      "priceFactor": 0.2,
+      "priceKey": "yogurt",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Loose plain dahi, original survey unit 1 kg; not Greek/high-protein yogurt.",
+      "images": [
+        {
+          "id": "yogurt",
+          "title": "Plain Yogurt",
+          "author": "Alabama Extension (ACES / Janet Guynn)",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plain_Yogurt.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Plain_Yogurt.jpg/960px-Plain_Yogurt.jpg",
+          "asset": "assets/food-images/yogurt.jpg",
+          "sha256": "9b3f6812019419636e16535f6e7f70ee349f314b6cefe1630a91a1489213dbb1",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Plain dahi / yogurt"
+        }
+      ]
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "portion": "1 small handful · 30 g edible",
+      "fdcId": 172430,
+      "grams": 30,
+      "group": "Plant sources",
+      "proteinPick": true,
+      "caloriePick": true,
+      "notes": "Unsalted raw edible peanuts. Useful protein plus energy; not a lean protein portion.",
+      "allergens": [
+        "Peanut"
+      ],
+      "calories": 170.1,
+      "protein": 7.7,
+      "carbs": 4.8,
+      "fat": 14.8,
+      "priceLow": 40.5,
+      "priceHigh": 40.5,
+      "priceFactor": 0.03,
+      "priceKey": "peanuts",
+      "sourceIds": [
+        "zaroori-peanuts"
+      ],
+      "priceBasis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Shelled peanuts; original unit1kg. No shell conversion. Shipping, cooking fuel and extras excluded.",
+      "images": [
+        {
+          "id": "peanuts",
+          "title": "Peanuts (shelled raw marketed)",
+          "author": "David E Mead",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peanuts_(shelled_raw_marketed).jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Peanuts_%28shelled_raw_marketed%29.jpg/960px-Peanuts_%28shelled_raw_marketed%29.jpg",
+          "asset": "assets/food-images/peanuts.jpg",
+          "sha256": "a274df562fe6d0507a0de4912511957250787b4b3ed3c2b298e6c3e1c39c8c19",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Peanuts"
+        }
+      ]
+    },
+    {
+      "id": "oats",
+      "name": "Plain oats",
+      "portion": "60 g dry oats",
+      "fdcId": 173904,
+      "grams": 60,
+      "group": "Plant sources",
+      "proteinPick": true,
+      "caloriePick": true,
+      "notes": "Dry weight before adding water or milk. Milk, sugar and toppings are extra.",
+      "allergens": [
+        "Oats; check gluten cross-contact"
+      ],
+      "calories": 227.4,
+      "protein": 7.9,
+      "carbs": 40.6,
+      "fat": 3.9,
+      "priceLow": 50.7,
+      "priceHigh": 50.7,
+      "priceFactor": 0.06,
+      "priceKey": "oats",
+      "sourceIds": [
+        "alfatah-oats"
+      ],
+      "priceBasis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Plain white oats; original pack1,000g. Shipping, cooking fuel and extras excluded.",
+      "images": [
+        {
+          "id": "oats",
+          "asset": "assets/food-images/oats.jpg",
+          "title": "Oatmeal.jpg",
+          "author": "Bill Ebbesen",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Oatmeal.jpg/500px-Oatmeal.jpg",
+          "sha256": "a9dec67dc9699b25fd3b0407bae045a333a1965d180500fa6b013c60fefb3683",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Plain oats"
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "Plain cooked rice",
+      "portion": "200 g cooked rice",
+      "fdcId": 168878,
+      "grams": 200,
+      "group": "Plant sources",
+      "proteinPick": false,
+      "caloriePick": true,
+      "notes": "Cost assumes 67 g dry rice yields 200 g cooked. Generic white rice nutrition; price uses IRRI rice. No oil or ghee included.",
+      "allergens": [],
+      "calories": 260,
+      "protein": 5.4,
+      "carbs": 56.3,
+      "fat": 0.6,
+      "priceLow": 7.4,
+      "priceHigh": 13.4,
+      "priceFactor": 0.067,
+      "priceKey": "rice",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Dry ordinary IRRI-6/9 rice, original survey unit 1 kg; not premium basmati.",
+      "images": [
+        {
+          "id": "rice",
+          "asset": "assets/food-images/rice.jpg",
+          "title": "Freshly cooked rice.JPG",
+          "author": "© BrokenSphere / Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Freshly_cooked_rice.JPG",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Freshly_cooked_rice.JPG/500px-Freshly_cooked_rice.JPG",
+          "sha256": "63a96c265d0ea741d7c8a8456b7a1e39cc1344b04bc23c49291860ff6267705f",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement. Rice close-up inside cooker; source image color-balanced by photographer.",
+          "label": "Plain cooked rice"
+        }
+      ]
+    },
+    {
+      "id": "roti",
+      "name": "Homemade whole-wheat roti",
+      "portion": "2 medium roti · about 80 g cooked",
+      "fdcId": 168893,
+      "grams": 60,
+      "group": "Plant sources",
+      "proteinPick": false,
+      "caloriePick": true,
+      "notes": "Nutrition and cost from 60 g dry atta plus water. No oil or ghee. This is homemade ingredient cost, not a tandoor price.",
+      "allergens": [
+        "Wheat / gluten"
+      ],
+      "calories": 204,
+      "protein": 7.9,
+      "carbs": 43.2,
+      "fat": 1.5,
+      "priceLow": 6.6,
+      "priceHigh": 10.6,
+      "priceFactor": 0.06,
+      "priceKey": "atta",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Wheat flour original survey unit 20 kg bag; divided by20. This is a bag-equivalent per-kg cost; small loose purchases may cost more.",
+      "images": [
+        {
+          "id": "roti",
+          "asset": "assets/food-images/roti.jpg",
+          "title": "Chapati.jpg",
+          "author": "Christian Köhler",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chapati.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chapati.jpg/330px-Chapati.jpg",
+          "sha256": "8a717a168bfe6c0cc5e16951cebc27c363f086c4042e02b711e194df535288d0",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Homemade whole-wheat roti"
+        }
+      ]
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "portion": "1 medium banana · 118 g edible",
+      "fdcId": 173944,
+      "grams": 118,
+      "group": "Plant sources",
+      "proteinPick": false,
+      "caloriePick": true,
+      "notes": "A useful carbohydrate snack with little protein. Fruit size varies.",
+      "allergens": [],
+      "calories": 105,
+      "protein": 1.3,
+      "carbs": 27,
+      "fat": 0.4,
+      "priceLow": 6.7,
+      "priceHigh": 21.7,
+      "priceFactor": 0.08333333333333333,
+      "priceKey": "banana",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Local bananas, original survey unit 1 dozen; fruit size and edible yield vary.",
+      "images": [
+        {
+          "id": "banana",
+          "asset": "assets/food-images/banana.jpg",
+          "title": "Ripe bananas.jpg",
+          "author": "Kellychard kariuki",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripe_bananas.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Ripe_bananas.jpg/330px-Ripe_bananas.jpg",
+          "sha256": "b0523b31b0aa6e3aa648c14b52a2ef9a997c4d97e0a71c508b46d596fac3d022",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Banana"
+        }
+      ]
+    },
+    {
+      "id": "dates",
+      "name": "Dried dates",
+      "portion": "40 g edible dates",
+      "fdcId": 171726,
+      "grams": 40,
+      "group": "Plant sources",
+      "proteinPick": false,
+      "caloriePick": true,
+      "notes": "Generic dried-date nutrition; variety and size vary. Good energy, little protein.",
+      "allergens": [],
+      "calories": 112.8,
+      "protein": 1,
+      "carbs": 30,
+      "fat": 0.2,
+      "priceLow": 26.8,
+      "priceHigh": 26.8,
+      "priceFactor": 0.04,
+      "priceKey": "dates",
+      "sourceIds": [
+        "alfatah-dates"
+      ],
+      "priceBasis": "Approximate single retail quote checked 28 October 2026, not a cross-market range. Zehdi dates; original pack500g at PKR335; multiplied by2. Shipping, cooking fuel and extras excluded.",
+      "images": [
+        {
+          "id": "dates",
+          "asset": "assets/food-images/dates.jpg",
+          "title": "DriedDates.JPG",
+          "author": "Vicki Nunn",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/File:DriedDates.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:DriedDates.JPG",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/DriedDates.JPG/330px-DriedDates.JPG",
+          "sha256": "691e10717dabdd152ba6252e31fdb59d3b758e8c743fb1a947ad2ea304f33763",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Dried dates"
+        }
+      ]
+    },
+    {
+      "id": "potato",
+      "name": "Boiled potatoes",
+      "portion": "250 g cooked, peeled",
+      "fdcId": 170440,
+      "grams": 250,
+      "group": "Plant sources",
+      "proteinPick": false,
+      "caloriePick": true,
+      "notes": "Cost allows about 300 g whole potatoes before peeling. No frying oil, butter or sauces.",
+      "allergens": [],
+      "calories": 215,
+      "protein": 4.3,
+      "carbs": 50,
+      "fat": 0.3,
+      "priceLow": 9,
+      "priceHigh": 27,
+      "priceFactor": 0.3,
+      "priceKey": "potato",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Raw potatoes, original survey unit 1 kg; peeling/cooking yield varies.",
+      "images": [
+        {
+          "id": "potato",
+          "asset": "assets/food-images/potato.jpg",
+          "title": "Boiled Potato 001.jpg",
+          "author": "Ocdp",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boiled_Potato_001.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Boiled_Potato_001.jpg/330px-Boiled_Potato_001.jpg",
+          "sha256": "7e5a969153ed016b50e9b52e8f3d2d46ed94bf9f6d640e473914a40f33220680",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement. Light herb garnish is illustrative; no butter or oil inferred.",
+          "label": "Boiled potatoes"
+        }
+      ]
+    },
+    {
+      "id": "oil",
+      "name": "Cooking oil",
+      "portion": "1 teaspoon · about 5 ml",
+      "fdcId": 172336,
+      "grams": 4.5,
+      "group": "Plant sources",
+      "proteinPick": false,
+      "caloriePick": true,
+      "notes": "Energy only: no protein. Measure a small amount in cooking; this is not a protein-food replacement.",
+      "allergens": [],
+      "calories": 39.8,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 4.5,
+      "priceLow": 3.1,
+      "priceHigh": 3.1,
+      "priceFactor": 0.005,
+      "priceKey": "oil",
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Observed nationwide min/max across surveyed markets on 22 October 2026. Dalda or similar cooking oil, original survey unit a 5 litre tin; divided by5.",
+      "images": [
+        {
+          "id": "oil",
+          "asset": "assets/food-images/oil.jpg",
+          "title": "Rape seed oil, Rypsiöljy.jpg",
+          "author": "UFinne",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rape_seed_oil,_Rypsi%C3%B6ljy.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Rape_seed_oil%2C_Rypsi%C3%B6ljy.jpg/330px-Rape_seed_oil%2C_Rypsi%C3%B6ljy.jpg",
+          "sha256": "a762431294f4b2d05be2afa4340fb361cbe2bb2ed3a8d5a868137ac2eca062df",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative rapeseed cooking oil; bottle size is not the logged teaspoon serving. Licensing verified via English Wikipedia mirrored Commons file page: https://en.wikipedia.org/wiki/File:Rape_seed_oil,_Rypsi%C3%B6ljy.jpg",
+          "label": "Cooking oil"
+        }
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "egg-roti",
+      "name": "Eggs with roti",
+      "parts": [
+        [
+          "eggs",
+          1
+        ],
+        [
+          "roti",
+          1
+        ]
+      ],
+      "notes": "2 boiled eggs and 2 homemade roti. Add vegetables; no oil or sauces counted.",
+      "portion": "1 meal · ingredients below",
+      "group": "Meat & eggs",
+      "proteinPick": true,
+      "caloriePick": true,
+      "allergens": [
+        "Egg",
+        "Wheat / gluten"
+      ],
+      "calories": 359,
+      "protein": 20.5,
+      "carbs": 44.3,
+      "fat": 12.1,
+      "priceLow": 46.6,
+      "priceHigh": 57.3,
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Estimated home ingredient cost, excluding cooking fuel, spices, oil unless listed, and delivery.",
+      "images": [
+        {
+          "id": "eggs",
+          "title": "Hard boiled egg 2",
+          "author": "3steph14",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hard_boiled_egg_2.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Hard_boiled_egg_2.jpg/500px-Hard_boiled_egg_2.jpg",
+          "asset": "assets/food-images/eggs.jpg",
+          "sha256": "cd004b69511adf86157444e343ef0683e391ec1469d90142e7ada68ef2fda4bc",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Boiled eggs"
+        },
+        {
+          "id": "roti",
+          "asset": "assets/food-images/roti.jpg",
+          "title": "Chapati.jpg",
+          "author": "Christian Köhler",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chapati.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chapati.jpg/330px-Chapati.jpg",
+          "sha256": "8a717a168bfe6c0cc5e16951cebc27c363f086c4042e02b711e194df535288d0",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Homemade whole-wheat roti"
+        }
+      ]
+    },
+    {
+      "id": "dal-roti",
+      "name": "Dal with roti",
+      "parts": [
+        [
+          "masoor",
+          1
+        ],
+        [
+          "roti",
+          0.5
+        ]
+      ],
+      "notes": "1 cup plain cooked masoor plus 1 homemade roti. Add vegetables; tadka/oil is extra.",
+      "portion": "1 meal · ingredients below",
+      "group": "Plant sources",
+      "proteinPick": true,
+      "caloriePick": true,
+      "allergens": [
+        "Wheat / gluten"
+      ],
+      "calories": 331.7,
+      "protein": 21.8,
+      "carbs": 61.5,
+      "fat": 1.6,
+      "priceLow": 19.4,
+      "priceHigh": 28.4,
+      "sourceIds": [
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Estimated home ingredient cost, excluding cooking fuel, spices, oil unless listed, and delivery.",
+      "images": [
+        {
+          "id": "masoor",
+          "title": "Masoor Dal in Dhaba Style",
+          "author": "Solehachikhalkar",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masoor_Dal_in_Dhaba_Style.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Masoor_Dal_in_Dhaba_Style.jpg/330px-Masoor_Dal_in_Dhaba_Style.jpg",
+          "displayNote": "Cooked masoor dal shown with rice and garnish; nutrition below is for plain cooked lentils only.",
+          "asset": "assets/food-images/masoor.jpg",
+          "sha256": "96036368c5f949708392c5dc7763f8c9ce045dd3c9cafe7dd0c72dc323d71919",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Plain cooked masoor dal"
+        },
+        {
+          "id": "roti",
+          "asset": "assets/food-images/roti.jpg",
+          "title": "Chapati.jpg",
+          "author": "Christian Köhler",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chapati.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chapati.jpg/330px-Chapati.jpg",
+          "sha256": "8a717a168bfe6c0cc5e16951cebc27c363f086c4042e02b711e194df535288d0",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Homemade whole-wheat roti"
+        }
+      ]
+    },
+    {
+      "id": "chana-dahi",
+      "name": "Chana with dahi",
+      "parts": [
+        [
+          "chana",
+          1
+        ],
+        [
+          "yogurt",
+          0.5
+        ]
+      ],
+      "notes": "1 cup boiled chickpeas and 100 g plain yogurt. Lemon, vegetables and spices can be added; no sweet sauces counted.",
+      "portion": "1 meal · ingredients below",
+      "group": "Dairy",
+      "proteinPick": true,
+      "caloriePick": true,
+      "allergens": [
+        "Milk"
+      ],
+      "calories": 330,
+      "protein": 18,
+      "carbs": 49.7,
+      "fat": 7.5,
+      "priceLow": 39.5,
+      "priceHigh": 60.5,
+      "sourceIds": [
+        "alfatah-chana",
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Estimated home ingredient cost, excluding cooking fuel, spices, oil unless listed, and delivery.",
+      "images": [
+        {
+          "id": "chana",
+          "title": "Chickpeas",
+          "author": "Jim Lukach",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chickpeas_(14068981304).jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Chickpeas_%2814068981304%29.jpg/960px-Chickpeas_%2814068981304%29.jpg",
+          "asset": "assets/food-images/chana.jpg",
+          "sha256": "9de197a4cfb2f54ccaa3dce8032925cb45578a7ec8bc5a6186270fe8c20c71b5",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Boiled chickpeas / chana"
+        },
+        {
+          "id": "yogurt",
+          "title": "Plain Yogurt",
+          "author": "Alabama Extension (ACES / Janet Guynn)",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plain_Yogurt.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Plain_Yogurt.jpg/960px-Plain_Yogurt.jpg",
+          "asset": "assets/food-images/yogurt.jpg",
+          "sha256": "9b3f6812019419636e16535f6e7f70ee349f314b6cefe1630a91a1489213dbb1",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Plain dahi / yogurt"
+        }
+      ]
+    },
+    {
+      "id": "oats-milk",
+      "name": "Oats with milk",
+      "parts": [
+        [
+          "oats",
+          1
+        ],
+        [
+          "milk",
+          1
+        ]
+      ],
+      "notes": "60 g dry oats plus 250 ml whole milk, cooked with water as needed. No sugar or toppings included.",
+      "portion": "1 meal · ingredients below",
+      "group": "Dairy",
+      "proteinPick": true,
+      "caloriePick": true,
+      "allergens": [
+        "Oats; check gluten cross-contact",
+        "Milk"
+      ],
+      "calories": 384.8,
+      "protein": 16,
+      "carbs": 53,
+      "fat": 12.3,
+      "priceLow": 93.2,
+      "priceHigh": 120.7,
+      "sourceIds": [
+        "alfatah-oats",
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Estimated home ingredient cost, excluding cooking fuel, spices, oil unless listed, and delivery.",
+      "images": [
+        {
+          "id": "oats",
+          "asset": "assets/food-images/oats.jpg",
+          "title": "Oatmeal.jpg",
+          "author": "Bill Ebbesen",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Oatmeal.jpg/500px-Oatmeal.jpg",
+          "sha256": "a9dec67dc9699b25fd3b0407bae045a333a1965d180500fa6b013c60fefb3683",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Plain oats"
+        },
+        {
+          "id": "milk",
+          "title": "Milk glass",
+          "author": "Stefan Kühn",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milk_glass.jpg",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Milk_glass.jpg",
+          "asset": "assets/food-images/milk.jpg",
+          "sha256": "bc3e9601e8ebe974aead13f016eb9bf77dfd164dce302464671ce7dd48884d7d",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Whole milk"
+        }
+      ]
+    },
+    {
+      "id": "banana-shake",
+      "name": "Banana, oats & peanut shake",
+      "parts": [
+        [
+          "milk",
+          1
+        ],
+        [
+          "banana",
+          1
+        ],
+        [
+          "oats",
+          0.5
+        ],
+        [
+          "peanuts",
+          0.5
+        ]
+      ],
+      "notes": "250 ml whole milk, 1 medium banana, 30 g oats and 15 g peanuts. Blend with water if needed; no added sugar. Contains milk and peanuts.",
+      "portion": "1 meal · ingredients below",
+      "group": "Dairy",
+      "proteinPick": true,
+      "caloriePick": true,
+      "allergens": [
+        "Milk",
+        "Oats; check gluten cross-contact",
+        "Peanut"
+      ],
+      "calories": 461.2,
+      "protein": 17.2,
+      "carbs": 62.1,
+      "fat": 18.2,
+      "priceLow": 94.8,
+      "priceHigh": 137.3,
+      "sourceIds": [
+        "pbs-spi-20261022",
+        "alfatah-oats",
+        "zaroori-peanuts"
+      ],
+      "priceBasis": "Estimated home ingredient cost, excluding cooking fuel, spices, oil unless listed, and delivery.",
+      "images": [
+        {
+          "id": "milk",
+          "title": "Milk glass",
+          "author": "Stefan Kühn",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milk_glass.jpg",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Milk_glass.jpg",
+          "asset": "assets/food-images/milk.jpg",
+          "sha256": "bc3e9601e8ebe974aead13f016eb9bf77dfd164dce302464671ce7dd48884d7d",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Whole milk"
+        },
+        {
+          "id": "banana",
+          "asset": "assets/food-images/banana.jpg",
+          "title": "Ripe bananas.jpg",
+          "author": "Kellychard kariuki",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripe_bananas.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Ripe_bananas.jpg/330px-Ripe_bananas.jpg",
+          "sha256": "b0523b31b0aa6e3aa648c14b52a2ef9a997c4d97e0a71c508b46d596fac3d022",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Banana"
+        },
+        {
+          "id": "oats",
+          "asset": "assets/food-images/oats.jpg",
+          "title": "Oatmeal.jpg",
+          "author": "Bill Ebbesen",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Oatmeal.jpg/500px-Oatmeal.jpg",
+          "sha256": "a9dec67dc9699b25fd3b0407bae045a333a1965d180500fa6b013c60fefb3683",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement.",
+          "label": "Plain oats"
+        },
+        {
+          "id": "peanuts",
+          "title": "Peanuts (shelled raw marketed)",
+          "author": "David E Mead",
+          "license": "CC0 1.0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peanuts_(shelled_raw_marketed).jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Peanuts_%28shelled_raw_marketed%29.jpg/960px-Peanuts_%28shelled_raw_marketed%29.jpg",
+          "asset": "assets/food-images/peanuts.jpg",
+          "sha256": "a274df562fe6d0507a0de4912511957250787b4b3ed3c2b298e6c3e1c39c8c19",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Peanuts"
+        }
+      ]
+    },
+    {
+      "id": "chicken-rice",
+      "name": "Chicken with rice",
+      "parts": [
+        [
+          "chicken",
+          1
+        ],
+        [
+          "rice",
+          1
+        ]
+      ],
+      "notes": "150 g cooked chicken breast plus 200 g plain cooked rice. Add vegetables; oil and sauces are extra.",
+      "portion": "1 meal · ingredients below",
+      "group": "Meat & eggs",
+      "proteinPick": true,
+      "caloriePick": true,
+      "allergens": [],
+      "calories": 507.5,
+      "protein": 51.9,
+      "carbs": 56.3,
+      "fat": 6,
+      "priceLow": 242,
+      "priceHigh": 248,
+      "sourceIds": [
+        "alfatah-chicken",
+        "pbs-spi-20261022"
+      ],
+      "priceBasis": "Estimated home ingredient cost, excluding cooking fuel, spices, oil unless listed, and delivery.",
+      "images": [
+        {
+          "id": "chicken",
+          "title": "Grilled Chicken Breasts",
+          "author": "Sharon Chen",
+          "authorUrl": "https://www.delishplan.com/",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grilled_Chicken_Breasts_(28905381261).jpg",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Grilled_Chicken_Breasts_%2828905381261%29.jpg/500px-Grilled_Chicken_Breasts_%2828905381261%29.jpg",
+          "asset": "assets/food-images/chicken.jpg",
+          "sha256": "f7df8aa3357b10d0d0077a93481b12e54af3053c77bc8170246c4543c1487fe0",
+          "changes": "No local image modifications; Wikimedia source thumbnail or source image.",
+          "label": "Chicken breast"
+        },
+        {
+          "id": "rice",
+          "asset": "assets/food-images/rice.jpg",
+          "title": "Freshly cooked rice.JPG",
+          "author": "© BrokenSphere / Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Freshly_cooked_rice.JPG",
+          "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Freshly_cooked_rice.JPG/500px-Freshly_cooked_rice.JPG",
+          "sha256": "63a96c265d0ea741d7c8a8456b7a1e39cc1344b04bc23c49291860ff6267705f",
+          "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+          "note": "Illustrative food photograph, not a serving measurement. Rice close-up inside cooker; source image color-balanced by photographer.",
+          "label": "Plain cooked rice"
+        }
+      ]
+    }
+  ]
+}

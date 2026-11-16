@@ -1,0 +1,23 @@
+- group:
+  - text: FORGE SYNCED T SHOW UP. GET STRONGER. Built by consistency.
+  - button "Previous day"
+  - button "Today · 27 Oct"
+  - button "Next day" [disabled]
+  - text: 5-DAY SPLIT Your days. Your rhythm. Beginner · Full gym · Build muscle Keep 2–3 repetitions in reserve. When every set reaches the top of the rep range with steady form, add the smallest available weight next time. For bodyweight moves, add repetitions or slow the lowering phase. WORKOUT COMPLETE You showed up. Session saved. Your next workout will follow this completed session. Resting or missing a day keeps the next session in place. Finish a workout to move forward.
+  - button "View completed workout →"
+  - text: Your week A forecast, not a deadline. Missed days never skip a session.
+  - button "MON 26 No workout logged Sequence held · nothing skipped"
+  - button "TUE 27 Push · chest & shoulders 5 exercises · 2 sets each"
+  - button "WED 28 Pull · back & biceps 4 exercises · 2 sets each"
+  - button "THU 29 Legs · strength 5 exercises · 2 sets each"
+  - button "FRI 30 Upper body · balanced 5 exercises · 2 sets each"
+  - button "SAT 31 Rest & recovery Easy movement + mobility"
+  - button "SUN 1 Rest & recovery Easy movement + mobility"
+  - text: Move well, then move more. Start with 5–10 minutes of easy movement and light practice sets. Use a controlled range of motion, breathe steadily and stop an exercise if you feel sharp pain. Previews are simplified illustrations; use the written cues and coaching to learn form.
+- tablist:
+  - tab "Today"
+  - tab "Food"
+  - tab "Train" [selected]
+  - tab "Progress"
+  - tab "Settings"
+- text: Offline ready · AI estimates still need a connection

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "oats",
+    "asset": "assets/food-images/oats.jpg",
+    "title": "Oatmeal.jpg",
+    "author": "Bill Ebbesen",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oatmeal.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Oatmeal.jpg/500px-Oatmeal.jpg",
+    "sha256": "a9dec67dc9699b25fd3b0407bae045a333a1965d180500fa6b013c60fefb3683",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative food photograph, not a serving measurement."
+  },
+  {
+    "id": "rice",
+    "asset": "assets/food-images/rice.jpg",
+    "title": "Freshly cooked rice.JPG",
+    "author": "© BrokenSphere / Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Freshly_cooked_rice.JPG",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Freshly_cooked_rice.JPG/500px-Freshly_cooked_rice.JPG",
+    "sha256": "63a96c265d0ea741d7c8a8456b7a1e39cc1344b04bc23c49291860ff6267705f",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative food photograph, not a serving measurement. Rice close-up inside cooker; source image color-balanced by photographer."
+  },
+  {
+    "id": "roti",
+    "asset": "assets/food-images/roti.jpg",
+    "title": "Chapati.jpg",
+    "author": "Christian Köhler",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chapati.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Chapati.jpg/330px-Chapati.jpg",
+    "sha256": "8a717a168bfe6c0cc5e16951cebc27c363f086c4042e02b711e194df535288d0",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative food photograph, not a serving measurement."
+  },
+  {
+    "id": "dates",
+    "asset": "assets/food-images/dates.jpg",
+    "title": "DriedDates.JPG",
+    "author": "Vicki Nunn",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:DriedDates.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:DriedDates.JPG",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/DriedDates.JPG/330px-DriedDates.JPG",
+    "sha256": "691e10717dabdd152ba6252e31fdb59d3b758e8c743fb1a947ad2ea304f33763",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative food photograph, not a serving measurement."
+  },
+  {
+    "id": "banana",
+    "asset": "assets/food-images/banana.jpg",
+    "title": "Ripe bananas.jpg",
+    "author": "Kellychard kariuki",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ripe_bananas.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Ripe_bananas.jpg/330px-Ripe_bananas.jpg",
+    "sha256": "b0523b31b0aa6e3aa648c14b52a2ef9a997c4d97e0a71c508b46d596fac3d022",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative food photograph, not a serving measurement."
+  },
+  {
+    "id": "potato",
+    "asset": "assets/food-images/potato.jpg",
+    "title": "Boiled Potato 001.jpg",
+    "author": "Ocdp",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boiled_Potato_001.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Boiled_Potato_001.jpg/330px-Boiled_Potato_001.jpg",
+    "sha256": "7e5a969153ed016b50e9b52e8f3d2d46ed94bf9f6d640e473914a40f33220680",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative food photograph, not a serving measurement. Light herb garnish is illustrative; no butter or oil inferred."
+  },
+  {
+    "id": "oil",
+    "asset": "assets/food-images/oil.jpg",
+    "title": "Rape seed oil, Rypsiöljy.jpg",
+    "author": "UFinne",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rape_seed_oil,_Rypsi%C3%B6ljy.jpg",
+    "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Rape_seed_oil%2C_Rypsi%C3%B6ljy.jpg/330px-Rape_seed_oil%2C_Rypsi%C3%B6ljy.jpg",
+    "sha256": "a762431294f4b2d05be2afa4340fb361cbe2bb2ed3a8d5a868137ac2eca062df",
+    "changes": "Wikimedia-provided thumbnail; no local image editing. Display crop may vary.",
+    "note": "Illustrative rapeseed cooking oil; bottle size is not the logged teaspoon serving. Licensing verified via English Wikipedia mirrored Commons file page: https://en.wikipedia.org/wiki/File:Rape_seed_oil,_Rypsi%C3%B6ljy.jpg"
+  }
+]

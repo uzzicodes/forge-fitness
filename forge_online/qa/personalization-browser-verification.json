@@ -1,0 +1,13 @@
+{
+  "engine": "Isolated Edge phone and desktop; synthetic account and upstreams, real app and barcode decoder",
+  "checks": [
+    "Female waist-focus profile shows BMI, food guidance, current targets and low-impact movement plan",
+    "Feet/inches entry converts correctly and blocks an underweight fat-loss signup without changing the saved profile",
+    "Bunes bread text calculates all macros for free and adds exactly one meal only after confirmation",
+    "Mixed meal AI reply displays assumed portions and all macros without auto-logging (controlled upstream replay)",
+    "Real EAN barcode photo decodes on-device; free lookup and privately remembered label scale 3 slices and require confirmation",
+    "A saved branded label works through natural text next time without another AI call"
+  ],
+  "errors": [],
+  "completedAt": "2026-10-28T22:49:44.306Z"
+}

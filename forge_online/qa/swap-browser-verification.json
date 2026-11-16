@@ -1,0 +1,11 @@
+{
+  "engine": "Isolated Edge phone, synthetic API only; no personal data touched",
+  "checks": [
+    "Partial exercise swap syncs a matching replacement, preserves saved 50 kg set and requires only one remaining set",
+    "Busy exercise can be moved to the end without changing completed sets",
+    "Replacement starts with its own load, finishes the original set budget and awards normal completion XP",
+    "Completed swapped workout and rank survive a fresh synchronized reload"
+  ],
+  "errors": [],
+  "completedAt": "2026-10-28T14:17:42.319Z"
+}

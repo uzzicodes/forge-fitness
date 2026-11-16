@@ -1,0 +1,114 @@
+[
+  {
+    "exerciseId": "dbpress",
+    "status": 200,
+    "title": "Dumbbell Floor Press - OPEX Exercise Library",
+    "author": "OPEX Fitness",
+    "checkedAt": "2026-10-27T15:53:42.113Z"
+  },
+  {
+    "exerciseId": "pushup",
+    "status": 200,
+    "title": "How to do a Push-Up | Proper Form & Technique | NASM",
+    "author": "National Academy of Sports Medicine (NASM)",
+    "checkedAt": "2026-10-27T15:53:42.298Z"
+  },
+  {
+    "exerciseId": "dbrow",
+    "status": 200,
+    "title": "Single Arm Dumbbell Row | Nuffield Health",
+    "author": "Nuffield Health",
+    "checkedAt": "2026-10-27T15:53:42.466Z"
+  },
+  {
+    "exerciseId": "prone",
+    "status": 200,
+    "title": "Prone Ws for Shoulder - Ask Doctor Jo",
+    "author": "AskDoctorJo",
+    "checkedAt": "2026-10-27T15:53:42.659Z"
+  },
+  {
+    "exerciseId": "lat",
+    "status": 200,
+    "title": "How to Do a Lat Pulldown | Back Workout",
+    "author": "Howcast",
+    "checkedAt": "2026-10-27T15:53:42.848Z"
+  },
+  {
+    "exerciseId": "pike",
+    "status": 200,
+    "title": "How to do an Incline Push-Up | Proper Form & Technique | NASM",
+    "author": "National Academy of Sports Medicine (NASM)",
+    "checkedAt": "2026-10-27T15:53:43.042Z"
+  },
+  {
+    "exerciseId": "bbsquat",
+    "status": 200,
+    "title": "Back Squat - OPEX Exercise Library",
+    "author": "OPEX Fitness",
+    "checkedAt": "2026-10-27T15:53:43.208Z"
+  },
+  {
+    "exerciseId": "airsquat",
+    "status": 200,
+    "title": "Air Squat - OPEX Exercise Library",
+    "author": "OPEX Fitness",
+    "checkedAt": "2026-10-27T15:53:43.395Z"
+  },
+  {
+    "exerciseId": "rdl",
+    "status": 200,
+    "title": "How to Do a Dumbbell Romanian Deadlift | Proper Form & Technique | NASM",
+    "author": "National Academy of Sports Medicine (NASM)",
+    "checkedAt": "2026-10-27T15:53:43.583Z"
+  },
+  {
+    "exerciseId": "bridge",
+    "status": 200,
+    "title": "How to do a Floor Bridge",
+    "author": "National Academy of Sports Medicine (NASM)",
+    "checkedAt": "2026-10-27T15:53:43.757Z"
+  },
+  {
+    "exerciseId": "lunge",
+    "status": 200,
+    "title": "Reverse Lunge - OPEX Exercise Library",
+    "author": "OPEX Fitness",
+    "checkedAt": "2026-10-27T15:53:43.931Z"
+  },
+  {
+    "exerciseId": "plank",
+    "status": 200,
+    "title": "How to do a Plank | Proper Form & Technique | NASM",
+    "author": "National Academy of Sports Medicine (NASM)",
+    "checkedAt": "2026-10-27T15:53:44.095Z"
+  },
+  {
+    "exerciseId": "deadbug",
+    "status": 200,
+    "title": "How to do a Dead Bug | Proper Form & Technique | NASM",
+    "author": "National Academy of Sports Medicine (NASM)",
+    "checkedAt": "2026-10-27T15:53:44.268Z"
+  },
+  {
+    "exerciseId": "squat",
+    "status": 200,
+    "title": "Goblet Squat - OPEX Exercise Library",
+    "author": "OPEX Fitness",
+    "checkedAt": "2026-10-27T15:53:44.445Z"
+  },
+  {
+    "exerciseId": "calf",
+    "status": 200,
+    "title": "Heel Raises Standing - Ask Doctor Jo",
+    "author": "AskDoctorJo",
+    "checkedAt": "2026-10-27T15:53:44.627Z"
+  },
+  {
+    "exerciseId": "inclinedbpress",
+    "status": 200,
+    "title": "Incline Dumbbell Bench Press - OPEX Exercise Library",
+    "author": "OPEX Fitness",
+    "checkedAt": "2026-10-27T16:09:10.369Z"
+  }
+]

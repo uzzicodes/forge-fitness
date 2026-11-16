@@ -1,0 +1,25 @@
+{
+  "dataset": "ethz/food101",
+  "split": "validation",
+  "row": 0,
+  "expected": "beignets",
+  "suggestions": [
+    {
+      "name": "beignets",
+      "score": 0.6419849642598922
+    },
+    {
+      "name": "churros",
+      "score": 0.06043773155824771
+    },
+    {
+      "name": "peking duck",
+      "score": 0.027810762477069168
+    },
+    {
+      "name": "prime rib",
+      "score": 0.02267867906370325
+    }
+  ],
+  "note": "One real supported-food sample, not a broad accuracy benchmark"
+}

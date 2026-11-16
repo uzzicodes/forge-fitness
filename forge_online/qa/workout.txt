@@ -1,0 +1,32 @@
+- button "Back"
+- heading "Your training" [level=2]
+- text: LET’S MOVE
+- group:
+  - text: TUESDAY, 27 OCT Push · chest & shoulders Your saved workout
+  - progressbar "SESSION PROGRESS 6 / 10 sets Warm up for 5–10 min, then do lighter practice sets. Tap each checkmark to save the reps and weight you actually did. Timed holds use seconds. 60"
+  - group "01 Barbell bench press Chest · triceps 2 SETS 6–10 REPS 120s REST SET 1 SET 2":
+    - button "Form preview"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+  - group "02 Dumbbell shoulder press Shoulders · triceps 2 SETS 8–12 REPS 90s REST SET 1 SET 2":
+    - button "Form preview"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+  - group "03 Dumbbell lateral raise Shoulders 2 SETS 10–15 REPS 60s REST SET 1 SET 2":
+    - button "Form preview"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+    - textbox "Reps" [disabled]
+    - textbox "Weight · kg" [disabled]
+    - button "Reopen set"
+  - text: 04 Dumbbell triceps extension Triceps 2 SETS 10–15 REPS 60s REST SET 1 SET 2
+- text: Meal saved. Daily totals updated.

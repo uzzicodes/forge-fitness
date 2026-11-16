@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-27T16:05:53.203Z",
+  "model": "gemini-3.5-flash-lite",
+  "fixture": "Public ETHZ Food101 validation sample, not a user photo",
+  "ok": true,
+  "result": {
+    "is_food": true,
+    "name": "New Orleans Style Beignets with Powdered Sugar",
+    "portion": "3 medium pieces (approx. 180g total)",
+    "calories": 640,
+    "protein": 10,
+    "carbs": 75,
+    "fat": 33,
+    "assumptions": "Assumed 3 medium deep-fried choux pastry beignets heavily dusted with powdered sugar, based on standard café portions. Weight cannot be measured precisely from a photograph, and fat/sugar absorption can vary depending on frying oil and recipe.",
+    "needsClarification": false,
+    "question": ""
+  }
+}

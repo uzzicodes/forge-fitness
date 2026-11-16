@@ -1,0 +1,26 @@
+- group:
+  - text: FORGE LET’S BUILD YOU Stronger starts with you. A little about you. A plan built around your life.
+  - textbox "What should we call you?"
+  - text: 30 characters remaining
+  - textbox "Weight · kg"
+  - textbox "Height · cm"
+  - textbox "Age · 18+"
+  - button "Sex for calorie formula Male"
+  - button "Your main goal Build muscle"
+  - button "Activity, including training Lightly active · 1–3 days/week"
+  - button "Equipment you have Full gym"
+  - button "Experience Beginner"
+  - text: Which days do you usually train? Choose 2–5 days. You can change your mind on the day.
+  - checkbox "Mon" [checked]
+  - checkbox "Tue" [checked]
+  - checkbox "Wed" [checked]
+  - checkbox "Thu" [checked]
+  - checkbox "Fri" [checked]
+  - checkbox "Sat"
+  - checkbox "Sun"
+  - text: 5 training days · 2 recovery days Missed a day? Your next unfinished session moves with you. Only finishing a workout advances the sequence.
+  - button "Set my own nutrition targets Optional. Leave blank for calculated estimates."
+  - text: "Starting estimates for adults: Mifflin–St Jeor × activity, with +200 kcal for muscle gain; protein 1.6 g/kg. Adjust using your progress or a dietitian’s advice. Exercise plans are templates, not medical prescriptions."
+  - button "Build my plan"
+  - text: PRIVATE ACCOUNT · SYNCED ACROSS DEVICES
+- text: Offline ready · AI estimates still need a connection

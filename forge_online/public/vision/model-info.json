@@ -1,0 +1,15 @@
+{
+  "publisher": "AlexKoff88/mobilenet_v2_food101",
+  "revision": "7d05d3878ee7f2aad7ad159018a8e5fdb4953d41",
+  "checkpoint_sha256": "42cd5d9988f0830588b3be5107197c9b622c9b73426377975c07e8b24e346680",
+  "model_sha256": "5a64e6de5c47a3e022249423baa6d5e7899b4e3f92af3f74f3b9891acb63049b",
+  "bytes": 9385781,
+  "format": "ONNX opset 17, NCHW RGB, resize short edge 256, center crop 224, ImageNet normalization",
+  "classes": 101,
+  "license": "Apache-2.0",
+  "zero_input_logit_range": [
+    -0.9071662425994873,
+    1.684547781944275
+  ],
+  "note": "Exported from trained checkpoint; publisher ONNX was rejected after degenerate-output checks."
+}

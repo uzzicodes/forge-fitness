@@ -1,0 +1,12 @@
+{
+  "engine": "Playwright WebKit 26.5 on Windows, not a physical iPhone",
+  "oldFailure": "page.goto: Response served by service worker has redirections\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:49460/fitness/\", waiting until \"load\"\u001b[22m\n",
+  "checks": [
+    "Old redirected cache reproduces a WebKit navigation failure",
+    "Recovery replaces an installed old worker and preserves unsynced local storage",
+    "Fixed worker opens cached app offline in WebKit",
+    "Root authentication redirect remains native and reaches its destination",
+    "Legacy index.html shortcut opens the canonical app without redirect metadata"
+  ],
+  "completedAt": "2026-10-28T14:18:27.412Z"
+}
