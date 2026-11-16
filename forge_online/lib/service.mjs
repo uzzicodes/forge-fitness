@@ -119,7 +119,8 @@ export function makeService(catalog,info,regional={foods:[]}){
     const custom=(input.labels||[]).map(labelFood).map(f=>({...f,id:'custom-'+f.id,aliases:[f.name],defaultPortion:{grams:f.servingGrams,unit:f.servingUnit},portions:[{unit:f.servingUnit,grams:f.servingGrams}]}));
     return json(custom.length?createMealParser(catalog,[...regional.foods,...custom])(input.description):interpret(input.description));
    }
-   const credential=async(provider='gemini')=>{if(provider==='groq'){const row=await db.prepare('SELECT encrypted_key FROM provider_credentials WHERE user_id=? AND provider=?').bind(uid,'groq').first();return row?decryptSecret(row.encrypted_key,env.APP_ENCRYPTION_KEY):'';}const row=await db.prepare('SELECT encrypted_key FROM user_credentials WHERE user_id=?').bind(uid).first();return row?decryptSecret(row.encrypted_key,env.APP_ENCRYPTION_KEY):(env.GEMINI_API_KEY||'');};
+   const credential=async(provider='gemini')=>{if(provider==='groq'){const row=await db.prepare('SELECT encrypted_key FROM provider_credentials WHERE user_id=? AND provider=?').bind(uid,'groq').first();return row?decryptSecret(row.encrypted_key,env.APP_ENCRYPTION_KEY):'';}const row=await db.prepare('SELECT encrypted_key FROM user_credentials WHERE user_id=?').bind(uid).first();// No shared/server-wide key: AI runs only with the signed-in user's own private key.
+    return row?decryptSecret(row.encrypted_key,env.APP_ENCRYPTION_KEY):'';};
    const aiEstimate=async(input)=>{
     const provider=input.provider||'gemini';if(!['gemini','groq'].includes(provider))throw fail('Choose Gemini or Groq for this photo estimate.');
     if(input.image&&(typeof input.image!=='string'||!/^data:image\/(?:jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(input.image)||input.image.length>11500000))throw fail('Use a JPEG, PNG or WebP photo under 8 MB.');
@@ -127,7 +128,6 @@ export function makeService(catalog,info,regional={foods:[]}){
     if(provider==='groq'){const today=new Date().toISOString().slice(0,10),reserved=await db.prepare('INSERT INTO ai_usage(user_id,day,count) VALUES(?,?,1) ON CONFLICT(user_id,day) DO UPDATE SET count=ai_usage.count+1 WHERE ai_usage.count<60 RETURNING count').bind(uid+'::groq',today).first();if(!reserved)throw fail('Your 60-request daily FORGE Groq safeguard is reached. Barcode lookup, text and saved labels still work.',429);return {...await groqEstimate(input,key),source:'Groq estimate'};}
     const today=new Date().toISOString().slice(0,10),reserve=who=>db.prepare('INSERT INTO ai_usage(user_id,day,count) VALUES(?,?,1) ON CONFLICT(user_id,day) DO UPDATE SET count=ai_usage.count+1 WHERE ai_usage.count<20 RETURNING count').bind(who,today).first();
     if(!await reserve(uid))throw fail('Your 20-request daily Gemini limit is reached. Free text logging remains available.',429);
-    if(env.GEMINI_API_KEY&&key===env.GEMINI_API_KEY&&!await reserve('__forge_shared_ai__'))throw fail('The shared photo-AI quota is used up for today. Free text logging and food references still work.',429);
     return {...await geminiEstimate(input,key),source:'Gemini estimate'};
    };
    if(path==='/api/interpret'&&request.method==='POST'){
