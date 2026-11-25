@@ -26,4 +26,4 @@ forge_online/    Next.js app, Cloudflare Worker API, D1 schema & migrations
 ```
 
 ---
-Built by **Muhammad Uzair** · [Portfolio](https://uzzicodes.github.io) · [LinkedIn](https://www.linkedin.com/in/muhammad-uzair-03b885355/)
+Built by **Muhammad Uzair** · [Portfolio](https://uzzicodes.github.io) · [LinkedIn](https://www.linkedin.com/in/uzzicodes/)
